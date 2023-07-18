@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #ffffff;
+  margin: 25px;
+}
+nav{
+  width: 70%;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+}
+header ul li,a{
+  margin: 10px 5px;
+  color: #000000;
+  text-decoration: none;
+}

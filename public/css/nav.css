@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f4f2f2;
+}
+
+.header {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  background: #ffffff;
+  margin: 25px;
+  padding: 20px;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  height: 30px;
+}
+nav .c1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* justify-content: center; */
+  list-style: none;
+}
+
+header .c1 li a {
+  margin: 20px 15px;
+  font-size: 1em;
+  color: #000000;
+  text-decoration: none;
+}
+header .c1 li{
+  position: relative;
+  float: left;
+}
+
+.nav .c1 li ul {
+  position: absolute;
+  list-style: none;
+  width: 200px;
+  display: none;
+  top: 25px;
+}
+
+.nav .c1 li:hover>ul {
+  display: block;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 4px 1px #000;
+}
+
+.nav .c1 li:hover ul li {
+  position: relative;
+  width: 100%;
+}
+
+.nav .c1 li ul li ul {
+  top: 0;
+  left: 190px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile img{
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 24px;
+}
+.profile .pro-in .log{
+  position: absolute;
+  display: none;
+}
+.profile .pro-in:hover .log{
+display: initial;
+display: block;
+border: 1px solid black;
+}
+@media (max-width: 900px) {
+  .header{
+    width: 95%;
+  }
+  .nav {
+    position: absolute;
+    width: 100%;
+    top: 130px;
+    display: none;
+  }
+
+  .header.active .nav {
+    display: initial;
+  }
+
+  .nav .c1 li {
+    width: 100%;
+  }
+
+  .nav .c1 li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  .nav .c1 li ul li ul {
+    top: 0;
+    left: 0;
+  }
+
+  /* .menutoggle{
+      position: relative;
+      width: 40px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menutoggle::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #000;
+      transform: translateY(-12px);
+      box-shadow: 0 12px #000;
+    }
+    .menutoggle::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #000;
+      transform: translateY(12px);
+    }
+    header.active .menutoggle::before{
+      transform: rotate(45deg);
+      box-shadow: 0 0 #000 rotate(65deg);
+      transition: all .5s;
+    }
+    header.active .menutoggle::after{
+       transform: rotate(315deg);  
+      transition: all .5s;
+    } */
+  .menutoggle {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menutoggle>* {
+    content: "";
+    position: absolute;
+    /* margin: 30px 0px; */
+    width: 100%;
+    height: 3px;
+    background: #000;
+    transform: translateY(-12px);
+  }
+  .menutoggle :nth-child(1){
+    position: relative;
+  transition:all .5s;
+    top: 0px;
+  }
+  .menutoggle :nth-child(2){
+    position: relative;
+  transition:ease-in-out 1s;
+    top: 8px;
+  }
+  .menutoggle :nth-child(3){
+    position: relative;
+  transition: all .5s;
+    top: 16px;
+  }
+    .header.active .menutoggle :nth-child(1){
+  transform: rotate(45deg);
+  top: 2px;
+  transition: all .5s;
+    }
+    .header.active .menutoggle :nth-child(2){
+  display: none;
+    }
+    .header.active .menutoggle :nth-child(3){
+  transform: rotate(315deg);
+  top: -2px;
+  transition: all .5s;
+    }
+}
+@media (max-width:475px){
+  .logo img{
+    height: 20px;
+    /* width: 100px; */
+  }
+}
