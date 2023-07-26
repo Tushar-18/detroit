@@ -19,5 +19,10 @@ Route::get('/', function () {
 });
 Route::post('/page',[my::class,'page1']);
 Route::view('/navigation','navigation');
+Route::view('/log','log');
 Route::view('/login','login');
+Route::view('/admin/dashboard','/admin/dashboard');
+Route::view('/cart','cart');
+Route::view('/footer','footer');
+Route::view('/reset_pwd','reset_pwd');
 
