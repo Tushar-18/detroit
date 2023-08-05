@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="css/nav.css">
 
     </head>
-    <div class="container-main ">
-        <header class="header active -mt-6">
+    <div class="container-main">
+        <header class="header active">
             <div class="logo"><img src="Images/logo.png" alt="error"></div>
             <nav class="nav">
                 <ul class="c1">
