@@ -17,7 +17,7 @@ use App\Http\Controllers\my;
 Route::get('/', function () {
   return view('index');
 });
-Route::post('/page',[my::class,'page1']);
+Route::view('/page','page1');
 Route::view('/navigation','navigation');
 Route::view('/log','log');
 Route::view('/login','login');
