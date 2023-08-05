@@ -6,7 +6,7 @@
         @vite('resources/css/app.css');
     </head>
     <div class="container-main">
-        <header class="header active">
+        <header class="header active -mt-6 -mb-6">
             <div class="logo"><img src="Images/logo.png" alt="error"></div>
             <nav class="nav">
                 <ul class="c1">

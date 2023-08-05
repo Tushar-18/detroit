@@ -19,9 +19,11 @@
       align-items: center;
       justify-content: left;
       height: 30vh;
+      padding: 200px 0px 0px 0px;
       margin-left: 100px;
-      /* width: 50%; */
+      width: 50%;
       font-size: 100px;
+
 }
 .text-small{
       display: flex;
@@ -31,9 +33,88 @@
       width: 50%;
       margin-left: 100px;
       font-size: 30px;
+      animation: pere 1s ease-in;
+}
+
+@keyframes pere {
+      from{
+            transform: translateX(-800px);
+      }
+      to{
+            transform: translateX(0);
+      }
+}
+.t0 ,.t2 ,.t4 ,.t6{
+      animation: p1 2s ease-in;
+}
+
+.t1 ,.t3 ,.t5{
+      animation: p2 2s ease-in;
+}
+
+.hover{
+      overflow: hidden;
 }
 .op{
       margin: 30px 100px;
+      cursor: pointer;
+}
+@keyframes p1 {
+      0%{
+            transform: translateY(0);
+      }
+      20%{
+            transform: translateY(0px);
+      }
+      40%{
+            transform: translateY(-100px);
+      }
+      50%{
+            transform: translateY(0px);
+      }
+      60%{
+            transform: translateY(-50px);
+      }
+      80%{
+            transform: translateY(0px);
+      }
+      100%{
+            transform: translateY(0);
+      }
+}
+
+@keyframes p2 {
+      0%{
+            transform: translateX(0);
+      }
+      20%{
+            transform: translateX(0px);
+      }
+      40%{
+            transform: translateX(1000px);
+      }
+      50%{
+            transform: translateX(0px);
+      }
+      60%{
+            transform: translateX(100px);
+      }
+      80%{
+            transform: translateX(0px);
+      }
+      100%{
+            transform: translateX(0);
+      }
+}
+
+
+
+
+.frist{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
 }
 ::-webkit-scrollbar{
       width: 10px;
