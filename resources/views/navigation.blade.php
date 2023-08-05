@@ -1,12 +1,11 @@
-
-    <link rel="stylesheet" href="css/nav.css">
-
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         @vite('resources/css/app.css');
+        <link rel="stylesheet" href="css/nav.css">
+
     </head>
-    <div class="container-main">
-        <header class="header active">
+    <div class="container-main ">
+        <header class="header active -mt-6">
             <div class="logo"><img src="Images/logo.png" alt="error"></div>
             <nav class="nav">
                 <ul class="c1">
