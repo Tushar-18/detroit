@@ -9,12 +9,12 @@
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        @vite('resources/css/app.css')
+        @vite('resources/css/app.css');
     </head>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-main">
         <header class="header active">
             <div class="logo"><img src="Images/logo.png" alt="error"></div>
             <nav class="nav">
@@ -40,7 +40,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="">Engine</a></li>
+                    {{-- <li><a href="">Engine</a></li> --}}
                 </ul>
             </nav>
             <div class="profile">
