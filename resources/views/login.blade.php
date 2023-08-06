@@ -29,6 +29,8 @@
 				<div>
 					<h1 class="text-2xl font-semibold">Login with your detroit account</h1>
 				</div>
+				<form action="login-action" method="post">
+					@csrf
 				<div class="divide-y divide-gray-200">
 					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 						<div class="relative">
@@ -38,14 +40,16 @@
 							
 						</div>
 						<div class="relative">
-							<input autocomplete="off" id="email" name="email" type="Password" class="  h-10 w-full border-b-2 placeholder-zinc-800 border-gray-300 text-gray-900 focus:outline-none rounded " placeholder="Password" />
+							<input autocomplete="off" id="email" name="pwd" type="Password" class="  h-10 w-full border-b-2 placeholder-zinc-800 border-gray-300 text-gray-900 focus:outline-none rounded " placeholder="Password" />
 							
 						</div>
 						<div class="relative">
 							<button class="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
 						</div>
+
 					</div>
 				</div>
+				</form>
 			</div>
 		</div>
 	</div>

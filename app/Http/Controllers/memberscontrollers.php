@@ -40,4 +40,16 @@ class memberscontrollers extends Controller
         }
         return view('login');
     }
+    public function login(Request $req){
+        $result = Members::where('user_email', $req->email)->where('user_pwd', $req->pwd)->first();
+        if($result == null)
+        {
+            return "invalid username and password";
+        }
+        else{
+            $req->session()->put('uname',$result['user_email']);
+            $req-> session()->put('pwd',$result['user_pwd']);
+            return view('index');
+        }
+    }
 }

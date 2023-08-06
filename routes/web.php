@@ -20,13 +20,13 @@ Route::get('/', function () {
 });
 Route::view('/register','register');
 Route::view('/navigation','navigation');
-Route::view('/log','log');
-Route::post('/login-action',[memberscontrollers::class,'add_users']);
+Route::post('/register-action',[memberscontrollers::class,'add_users']);
 Route::view('/login','login');
+Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
-Route::view('/home','index');
+Route::view('/index','index');
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');

@@ -10,7 +10,7 @@
 <body class="bg-zinc-900">
   <section class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-zinc-700 mt-20">
     <h1 class="text-xl font-bold text-white capitalize dark:text-white">Account settings</h1>
-    <form action="login-action" method="post" enctype="multipart/form-data">
+    <form action="register-action" method="post" enctype="multipart/form-data">
       @csrf
         <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
