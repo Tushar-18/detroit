@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\my;
+use App\Http\Controllers\memberscontrollers;
+use App\Models\Members;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,15 @@ use App\Http\Controllers\my;
 Route::get('/', function () {
   return view('index');
 });
-Route::view('/page','page1');
+Route::view('/register','register');
 Route::view('/navigation','navigation');
 Route::view('/log','log');
+Route::post('/login-action',[memberscontrollers::class,'add_users']);
 Route::view('/login','login');
-Route::view('/admin/dashboard','/admin/dashboard');
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
 Route::view('/home','index');
 
+// Admin
+Route::view('/admin/dashboard','/admin/dashboard');
