@@ -27,18 +27,18 @@
 		<div class="relative px-4 py-10 bg-blue-300/60 backdrop-blur-sm shadow-lg sm:rounded-3xl sm:p-20">
 			<div class="max-w-md mx-auto">
 				<div>
-					<h1 class="text-2xl font-semibold">Login Form with Floating Labels</h1>
+					<h1 class="text-2xl font-semibold">Login with your detroit account</h1>
 				</div>
 				<div class="divide-y divide-gray-200">
 					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 						<div class="relative">
-							<input autocomplete="off" id="email" name="email" type="text" class="  h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none " placeholder="Email address" />
+							<input autocomplete="off" id="email" name="email" type="text" class="  h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none rounded placeholder-zinc-800" placeholder="Email address" />
 							
 
 							
 						</div>
 						<div class="relative">
-							<input autocomplete="off" id="password" name="password" type="password" class=" placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Password" />
+							<input autocomplete="off" id="email" name="email" type="Password" class="  h-10 w-full border-b-2 placeholder-zinc-800 border-gray-300 text-gray-900 focus:outline-none rounded " placeholder="Password" />
 							
 						</div>
 						<div class="relative">

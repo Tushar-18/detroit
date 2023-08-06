@@ -38,6 +38,6 @@ class memberscontrollers extends Controller
         } else {
             session()->flash('err', 'error in saving data');
         }
-        return view('log');
+        return view('login');
     }
 }
