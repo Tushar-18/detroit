@@ -52,4 +52,8 @@ class memberscontrollers extends Controller
             return view('index');
         }
     }
+    public function logout(Request $req){
+        $req->session()->flush();
+        return redirect('login');
+    }
 }

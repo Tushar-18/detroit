@@ -22,6 +22,7 @@ Route::view('/register','register');
 Route::view('/navigation','navigation');
 Route::post('/register-action',[memberscontrollers::class,'add_users']);
 Route::view('/login','login');
+Route::get('/logout',[memberscontrollers::class,'logout']);
 Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');

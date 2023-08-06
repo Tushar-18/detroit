@@ -36,7 +36,7 @@
             <div class="profile">
                 <div class="pro-in">
                     <img src="Images/default.jpg" alt="error" id="signin">
-                    <div class="log"><a href="">Login</a></div>
+                    <div class="log bg-white px-1"><a href="logout">Login</a></div>
                 </div>
                 <label for="signin" style="margin-right: 10px">Name</label>
                 <div class="menutoggle">
