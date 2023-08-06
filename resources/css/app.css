@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 .my-custom-bg-class{
-  background-image: url(../../public/Images/lo.jpg);
+  background-image: url(../../public/Images/bg-main.jpg);
+  background-size: cover;
 }
