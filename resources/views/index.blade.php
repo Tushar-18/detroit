@@ -7,6 +7,7 @@
     <title>Document</title>
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -15,13 +16,8 @@
     <div class="images">
         <div class="box-border bg-gradient-to-r from-black p1">
            <div class="text-large box-border text-white">
-               <p class="t0">D</p>
-               <p class="t1">E</p>
-               <p class="t2">T</p>
-               <p class="t3">R</p>
-               <p class="t4">O</p>
-               <p class="t5">I</p>
-               <p class="t6">T</p>
+               <p class="t0">DETROIT</p>
+             
            </div>
            <div class="text-small box-border text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, itaque non modi assumenda in maxime repellendus minima reprehenderit distinctio dolore, dolorum ut adipisci architecto aliquam velit iure quo! Doloribus, doloremque?
@@ -61,7 +57,7 @@
             </div>
             <div class="flex items-center justify-between">
                 <span class="text-3xl font-bold text-white dark:text-white  ">$599</span>
-                <a href="cart" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 add-to-cart">Add to cart</a>
+                <a href="cart" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
                 {{-- <a href="#"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
             </div>
         </div>
@@ -98,7 +94,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <span class="text-3xl font-bold text-white dark:text-white  ">$599</span>
-                    <a href="#" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 add-to-cart">Add to cart</a>
+                    <a href="#" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
                     {{-- <a href="#"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
                 </div>
             </div>
@@ -135,7 +131,7 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-3xl font-bold text-white dark:text-white  ">$599</span>
-                        <a href="#" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 add-to-cart">Add to cart</a>
+                        <a href="#" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
                         {{-- <a href="#"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
                     </div>
                 </div>

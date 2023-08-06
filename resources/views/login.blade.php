@@ -22,9 +22,9 @@
 <div class="min-h-screen  py-6 flex flex-col justify-center sm:py-12 ">
 	<div class="relative py-3 sm:max-w-xl sm:mx-auto">
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-blue-300/50 to-blue-500/50 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+			class="absolute inset-0 bg-gradient-to-r from-blue-300/50 to-blue-500/50 shadow-lg transform -skew-y-12 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
 		</div>
-		<div class="relative px-4 py-10 bg-blue-300/60 backdrop-blur-sm shadow-lg sm:rounded-3xl sm:p-20">
+		<div class="relative px-4 py-10 bg-blue-300 backdrop-blur-sm shadow-lg sm:rounded-3xl sm:p-20">
 			<div class="max-w-md mx-auto">
 				<div>
 					<h1 class="text-2xl font-semibold">Login with your detroit account</h1>
@@ -44,7 +44,7 @@
 							
 						</div>
 						<div class="relative">
-							<button class="bg-blue-500 text-white rounded-md px-2 py-1">Submit</button>
+							<a href="#" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-800 dark:focus:ring-blue-500 add-to-cart">Create</a>
 						</div>
 
 					</div>
