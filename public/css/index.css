@@ -1,14 +1,4 @@
-.add-to-cart:hover{
-      transform: translateY(-5px);
-}
-.add-to-cart{
-      /* transition-property: transform;
-      transition-duration: 0.3s;
-      transition-timing-function: ease;
-      transition-delay: 0s; */
 
-      transition: transform 0.3s, background-color 0.3s,color 0.3s;
-}
 .images{
       background-image:url(../images/bg-3.jpg);
       background-size: 100% 100%;
@@ -64,7 +54,7 @@
             transform: translateY(0);
       }
       20%{
-            transform: translateY(0px);
+            transform: translateY(-110px);
       }
       40%{
             transform: translateY(-100px);
@@ -83,29 +73,7 @@
       }
 }
 
-@keyframes p2 {
-      0%{
-            transform: translateX(0);
-      }
-      20%{
-            transform: translateX(0px);
-      }
-      40%{
-            transform: translateX(1000px);
-      }
-      50%{
-            transform: translateX(0px);
-      }
-      60%{
-            transform: translateX(100px);
-      }
-      80%{
-            transform: translateX(0px);
-      }
-      100%{
-            transform: translateX(0);
-      }
-}
+
 
 
 

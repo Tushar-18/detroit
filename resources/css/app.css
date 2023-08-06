@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 .my-custom-bg-class{
-  background-image: url(../../public/Images/bg-main.jpg);
+  background-image: url(../../public/Images/lo-2.jpg);
   background-size: cover;
   
+}
+.btn-hover:hover{
+  transform: translateY(-5px);
+}
+.btn-hover{
+  transition: transform 0.3s, background-color 0.3s,color 0.3s;
 }

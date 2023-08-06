@@ -31,37 +31,28 @@
                     </div>
                 </div>
                 <!-- Price Information -->
-                <div class="self-center text-center">
+                <div class="self-center text-center ml-28">
                     <p class="text-white font-normal text-sm line-through">$99.99
                         <span class="text-emerald-500 ml-2">(-50% OFF)</span>
                     </p>
-                    <p class="text-white font-normal text-xl">$49.99</p>
+                    <p class="text-white font-normal text-xl ">$49.99</p>
                 </div>
                 <!-- Remove Product Icon -->
                 <div class="self-center">
-                    <button class="text-white">
-                        <svg class="text-white" height="24px" width="24px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g>
-                            <path d="M400,113.3h-80v-20c0-16.2-13.1-29.3-29.3-29.3h-69.5C205.1,64,192,77.1,192,93.3v20h-80V128h21.1l23.6,290.7   c0,16.2,13.1,29.3,29.3,29.3h141c16.2,0,29.3-13.1,29.3-29.3L379.6,128H400V113.3z M206.6,93.3c0-8.1,6.6-14.7,14.6-14.7h69.5   c8.1,0,14.6,6.6,14.6,14.7v20h-98.7V93.3z M341.6,417.9l0,0.4v0.4c0,8.1-6.6,14.7-14.6,14.7H186c-8.1,0-14.6-6.6-14.6-14.7v-0.4   l0-0.4L147.7,128h217.2L341.6,417.9z"/>
-                            <g>
-                            <rect height="241" width="14" x="249" y="160"/>
-                            <polygon points="320,160 305.4,160 294.7,401 309.3,401"/>
-                            <polygon points="206.5,160 192,160 202.7,401 217.3,401"/>
-                            </g>
-                        </g>
-                        </svg>
-                    </button>
+                    <button class="transition-colors text-sm bg-red-600 hover:bg-red-700 p-2 rounded-sm w-24 text-white text-hover shadow-md btn-hover">
+                        Cancel  
+                </button>
                 </div>
             </div>
             <!-- Product Quantity -->
             <div class="flex flex-row self-center gap-1">
-                <button class="w-5 h-5 self-center rounded-full border border-gray-300">
+                <button class="w-5 h-5 self-center rounded-full border border-gray-300 decrement">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14" />
                     </svg>
                 </button>
-                <input type="text" readonly="readonly" value="1" class="w-8 h-8 text-center text-black text-sm outline-none border border-gray-300 rounded-sm">
-                <button class="w-5 h-5 self-center rounded-full border border-gray-300">
+                <input type="text" readonly="readonly" value="1" class="w-8 h-8 text-center bg-zinc-600 text-black text-sm outline-none border border-gray-300 rounded-sm">
+                <button class="w-5 h-5 self-center rounded-full border border-gray-300  increment">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 5v14M5 12h14" />
                     </svg>
@@ -99,11 +90,11 @@
                 </div>
             </div>
             <div class="flex gap-2">
-                <button class="transition-colors text-sm bg-blue-600 hover:bg-blue-700 p-2 rounded-sm w-64 text-white text-hover shadow-md">
+                <button class="transition-colors text-sm bg-blue-600 hover:bg-blue-700 p-2 rounded-sm w-64 text-white text-hover shadow-md btn-hover">
                         FINISH  
                 </button>
                 <a href="home">
-                <button class="transition-colors text-sm bg-white border border-gray-600 p-2 rounded-sm w-60 text-black text-hover shadow-md">
+                <button class="transition-colors text-sm bg-white border border-gray-600 p-2 rounded-sm w-60 text-black text-hover shadow-md btn-hover">
                         ADD MORE PRODUCTS
                 </button></a>
             </div>
