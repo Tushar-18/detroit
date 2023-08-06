@@ -27,6 +27,7 @@ Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
 Route::view('/index','index');
+Route::view("admin.product-form","admin/product-form");
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
