@@ -12,7 +12,6 @@
 
 <body>
     @include("navigation");
-    
     <div class="images">
         <div class="box-border bg-gradient-to-r from-black p1">
            <div class="text-large box-border text-white">

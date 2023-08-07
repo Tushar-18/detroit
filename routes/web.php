@@ -26,9 +26,8 @@ Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
-// Route::view('/home','index');
-Route::get('/home',[productController::class,'products']);
-
+Route::get('/index',[productController::class,'products'])->middleware('auth');
+Route::view("admin.product-form","admin/product-form");
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');

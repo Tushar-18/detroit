@@ -24,10 +24,7 @@
                             <li><a href="Ram">Ram</a></li>
                             <li><a href="Rom">Rom</a></li>
                             <li><a href="PSU">PSU</a></li>
-                            <li style="display: flex;margin-left: 15px;">Cooling 
-
-                                
-                            </li>
+                            <li ><a>Cooling</a></li>
                         </ul>
                     </li>
                     {{-- <li><a href="">Engine</a></li> --}}

@@ -129,6 +129,9 @@
               @enderror
           </span>
             </div>
+            <div class="relative">
+							<p class="text-white">have an account <a href="login" class="text-blue-600">Login</a></p>	
+						</div>
         </div>
 
         <div class="flex justify-end mt-6">

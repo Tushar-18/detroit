@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Members;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class memberscontrollers extends Controller
 {
@@ -35,6 +38,14 @@ class memberscontrollers extends Controller
         // $reg->gender = $req->gender;
         if ($reg->save()) {
             session()->flash('succ', 'Data saved successfully');
+        $email = $req->em;
+        $fn = $req->fn;
+        $data=['email'=>$email,'fn'=>$fn];
+        Mail::send('register_template',["data1"=>$data],function($message)use($data){
+            
+            $message->to($data['email'],$data['fn']);
+            $message->from("travaliya519@rku.ac.in","Tushar");
+        });
         } else {
             session()->flash('err', 'error in saving data');
         }
@@ -49,11 +60,16 @@ class memberscontrollers extends Controller
         else{
             $req->session()->put('uname',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
-            return view('index');
+            return redirect('index');
         }
     }
     public function logout(Request $req){
         $req->session()->flush();
         return redirect('login');
+    }
+
+    public function fetch_user(){
+        $data = Members::select()->get();
+        return view('admin/dashboard',compact('data'));
     }
 }

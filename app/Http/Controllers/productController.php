@@ -24,13 +24,15 @@ class productController extends Controller
             session()->flash('err', 'error in saving data');
         }
         $data = Products::select()->get();
-        return view('index',compact('data'));
+        // return view('/index',compact('data'));
+        return redirect()->route('login')->with([ 'data' => $data ]);
     }
     public function products(){
         $data = Products::select()->get();
-        return view('index',compact('data'));
+        return view('/index',compact('data'));
     }
     public function cart_in(Request $req){
       
     }
+    
 }
