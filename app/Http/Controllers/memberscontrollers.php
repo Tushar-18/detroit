@@ -49,7 +49,12 @@ class memberscontrollers extends Controller
         } else {
             session()->flash('err', 'error in saving data');
         }
-        return view('login');
+        $data = Members::select()->get();
+        return view('index',compact('data'));
+    }
+    public function fech_user(){
+        $data = Members::select()->get();
+        return view('admin/dashboard',compact('data'));
     }
     public function login(Request $req){
         $result = Members::where('user_email', $req->email)->where('user_pwd', $req->pwd)->first();
