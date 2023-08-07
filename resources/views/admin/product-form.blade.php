@@ -49,6 +49,8 @@
                 {{ $message }}
             @enderror
         </span>
+
+        
             </div>
             <div>
                 <label class="text-white dark:text-gray-200" for="pin">product_description</label>
