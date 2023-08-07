@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\memberscontrollers;
-use App\Models\Members;
-
+use App\Http\Controllers\productController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +26,11 @@ Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
-Route::view('/index','index');
-Route::view("admin.product-form","admin/product-form");
+// Route::view('/home','index');
+Route::get('/home',[productController::class,'products']);
+
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
+Route::view("admin/product-form","admin/product-form");
+Route::post("admin/product-action",[productController::class,'add_product']);

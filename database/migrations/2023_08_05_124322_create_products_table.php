@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('product_quantity');
             $table->string('product_brand');
             $table->string('product_description');
-            $table->string('product_status');
+            $table->string('product_status')->default('Active');
             $table->timestamps();
         });
     }
