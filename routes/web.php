@@ -36,3 +36,4 @@ Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);
 Route::view("admin/product-form","admin/product-form");
 Route::post("admin/product-action",[productController::class,'add_product']);
+Route::view("admin/product","admin/admin-product");
