@@ -6,7 +6,7 @@
 </head>
 <div class="container-main">
     <header class="header active">
-        <div class="logo"><img src="Images/logo.png" alt="error"></div>
+        <div class="logo"><img src="Images/black-logo.png" alt="error"></div>
         <nav class="nav">
             <ul class="c1">
                 <li><a href="">Home</a></li>
@@ -56,13 +56,21 @@
     </header>
 </div>
 <script src="js/nav.js"></script>
+{{-- end navigation --}}
+
+
+
 @yield('index')
+
+
+
+{{-- start footer --}}
 <footer class="w-full text-gray-700 bg-zinc-600 body-font">
     <div
         class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
             <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
-               <img src="images/logo.png" alt="error">
+               <img src="images/white-logo.png" alt="error">
             </a>
             <p class="mt-2 text-sm text-gray-500">Pc components, Keyboard and Mouse</p>
             <div class="mt-4">
