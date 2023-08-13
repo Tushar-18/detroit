@@ -30,7 +30,7 @@ class productController extends Controller
     }
     public function products(){
         $data = Products::select()->get();
-        return redirect('/')->with(compact('data'));
+        return view('/admin/admin-product',compact('data'));
     }
     public function cart_in(Request $req){
       
