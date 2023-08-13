@@ -63,14 +63,17 @@ class memberscontrollers extends Controller
             return "invalid username and password";
         }
         else{
-            $req->session()->put('uname',$result['user_email']);
+            $req->session()->put('email',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
-            return redirect('index');
+            $req-> session()->put('name',$result['user_name']);
+            $req-> session()->put('pic',$result['user_pic']);
+
+            return redirect('/');
         }
     }
     public function logout(Request $req){
         $req->session()->flush();
-        return redirect('login');
+        return redirect('/');
     }
 
     public function fetch_user(){
