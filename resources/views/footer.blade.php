@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+ 
   @vite('resources/css/app.css')
 </head>
-<body>
-  <!-- component -->
-<div class="flex items-end w-full min-h-screen bg-white">
 
+  <!-- component -->
     <footer class="w-full text-gray-700 bg-gray-100 body-font">
         <div
             class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
@@ -121,6 +115,3 @@
         </div>
     </footer> 
 
-</div>
-</body>
-</html>
