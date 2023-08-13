@@ -44,7 +44,7 @@ class memberscontrollers extends Controller
         Mail::send('register_template',["data1"=>$data],function($message)use($data){
             
             $message->to($data['email'],$data['fn']);
-            $message->from("travaliya519@rku.ac.in","Tushar");
+            $message->from("hnananiya813@rku.ac.in","Harshit");
         });
         } else {
             session()->flash('err', 'error in saving data');
@@ -62,6 +62,7 @@ class memberscontrollers extends Controller
         {
             return "invalid username and password";
         }
+        
         else{
             $req->session()->put('email',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
