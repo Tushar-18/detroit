@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\memberscontrollers;
 use App\Http\Controllers\productController;
+use App\Models\Products;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,8 @@ use App\Http\Controllers\productController;
 */
 
 Route::get('/', function () {
-  return view('index');
+  $data = Products::select()->get();
+  return view('index')->with(compact('data'));
 });
 Route::view('/register','register');
 Route::view('/navigation','navigation');
@@ -26,7 +28,7 @@ Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
-Route::get('/index',[productController::class,'products'])->middleware('auth');
+// Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
 
 // Admin

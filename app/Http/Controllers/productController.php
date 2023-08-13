@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class productController extends Controller
 {
@@ -25,11 +26,11 @@ class productController extends Controller
         }
         $data = Products::select()->get();
         // return view('/index',compact('data'));
-        return redirect()->route('login')->with([ 'data' => $data ]);
+        return redirect('/')->with(compact('data'));
     }
     public function products(){
         $data = Products::select()->get();
-        return view('/index',compact('data'));
+        return redirect('/')->with(compact('data'));
     }
     public function cart_in(Request $req){
       

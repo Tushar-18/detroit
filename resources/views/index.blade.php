@@ -28,9 +28,9 @@
 <div class="first flex flex-wrap justify-center align-middle w-full ">
 @foreach ($data as $d)
     <div class="hover flex-col justify-around">
-    <div class="max-w-sm bg-zinc-700 border flex-col w-96 border-gray-200 rounded-lg shadow  dark:border-gray-700 op">
-        <div href="#" class="items-center flex">
-            <img class="p-8 rounded-t-lg align-middle h-64" width="400px" src="product_pic/{{$d['product_images']}}" alt="product image" />
+    <div class="max-w-sm bg-zinc-800 border flex-col w-96 border-gray-200 rounded-lg shadow  dark:border-gray-700 op">
+        <div href="#" class="items-center flex p-8">
+            <img class=" rounded-md align-middle h-56 " width="400px" src="product_pic/{{$d['product_images']}}" alt="product image" />
         </div>
         <div class="px-5 pb-5">
             <a href="#">
@@ -58,7 +58,7 @@
             <div class="flex items-center justify-between">
                 <span class="text-3xl font-bold text-white dark:text-white  ">$599</span>
                 <a href="cart" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
-                {{-- <a href="#"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
+                {{-- <a href="cart"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
             </div>
         </div>
     </div>
