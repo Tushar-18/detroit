@@ -1,8 +1,9 @@
+@extends('../layouts/admin-side-navbar')
 <head>
      @vite('resources/css/app.css')
 </head>
-@include('admin.admin-side-navdar');
-
+{{-- @include('admin.admin-side-navbar'); --}}
+@section('content')
 <div class="overflow-x-auto overflow-y-hidden rounded-lg border border-gray-200 w-full shadow-md m-5">
      <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
          <thead class="bg-gray-50">
@@ -94,3 +95,4 @@
          </tbody>
      </table>
  </div>
+ @endsection

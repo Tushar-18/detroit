@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     @vite('resources/css/app.css')
 </head>
 
-<body>
-    <!-- component -->
-
-    <body class="font-poppins antialiased">
         <div id="view" class="h-full w-screen flex flex-row" x-data="{ sidenav: true }">
             <button @click="sidenav = true"
                 class="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden">
@@ -126,9 +116,6 @@
                     </div>
                 </div>
             </div>
-            {{-- add --}}
+            @yield('content')
         </div>
-    </body>
-</body>
-
-</html>
+    

@@ -1,3 +1,4 @@
+@extends('layouts/master')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,8 @@
 </head>
 
 <body>
-    @include("navigation");
+    {{-- @include("navigation"); --}}
+    @section('index')
     <div class="images">
         <div class="box-border bg-gradient-to-r from-black p1">
            <div class="text-large box-border text-white">
@@ -66,7 +68,7 @@
 @endforeach
 </div>
 {{-- item cart end --}}
-
+@endsection
 </body>
 
 </html>
