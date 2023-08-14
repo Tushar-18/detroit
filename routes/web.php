@@ -31,6 +31,7 @@ Route::view('/reset_pwd','reset_pwd');
 Route::view('/product-details','product-details');
 // Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
+Route::view("items","items");
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
@@ -39,3 +40,4 @@ Route::view("admin/product-form","admin/product-form");
 Route::post("admin/product-action",[productController::class,'add_product']);
 Route::view("admin/product","admin/admin-product");
 Route::get("admin/product",[productController::class,'products']);
+
