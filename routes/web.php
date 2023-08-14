@@ -28,6 +28,7 @@ Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
+Route::view('/product-details','product-details');
 // Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
 
