@@ -65,23 +65,23 @@
 
 
 {{-- start footer --}}
-<footer class="w-full text-gray-700 bg-zinc-600 body-font">
+<footer class="w-full text-gray-700 bg-zinc-800 body-font">
     <div
-        class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
-        <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+        class="container flex align-middle flex-wrap px-8 py-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+        <div class="flex-shrink-0 w-64 mx-auto mt-20 text-center md:mx-0 md:text-left">
             <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                <img src="images/white-logo.png" alt="error">
             </a>
-            <p class="mt-2 text-sm text-gray-500">Pc components, Keyboard and Mouse</p>
+            <p class="mt-2 text-sm text-white">Pc components, Keyboard and Mouse</p>
             <div class="mt-4">
                 <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-                    <a class="text-gray-500 cursor-pointer hover:text-gray-700">
+                    <a class="text-white cursor-pointer hover:text-gray-300">
                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="w-5 h-5" viewBox="0 0 24 24">
                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                         </svg>
                     </a>
-                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <a class="ml-3 text-white cursor-pointer hover:text-gray-300">
                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="w-5 h-5" viewBox="0 0 24 24">
                             <path
@@ -89,14 +89,14 @@
                             </path>
                         </svg>
                     </a>
-                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <a class="ml-3 text-white cursor-pointer hover:text-gray-300">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                         </svg>
                     </a>
-                    <a class="ml-3 text-gray-500 cursor-pointer hover:text-gray-700">
+                    <a class="ml-3 text-white cursor-pointer hover:text-gray-300">
                         <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                             <path stroke="none"
@@ -109,68 +109,48 @@
             </div>
         </div>
         <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
-            {{-- <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">About</h2>
-                <nav class="mb-10 list-none">
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Company</a>
-                    </li>
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Careers</a>
-                    </li>
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Blog</a>
-                    </li>
-                </nav>
-            </div> --}}
-            {{-- <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font">Support</h2>
-                <nav class="mb-10 list-none">
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Contact Support</a>
-                    </li>
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Help Resources</a>
-                    </li>
-                    <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Release Updates</a>
-                    </li>
-                </nav>
-            </div> --}}
             <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font ml-12">Platform
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-white uppercase title-font ml-6">Cp Components
                 </h2>
                 <nav class="mb-10 list-none flex flex-col">
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Terms &amp; Privacy</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Motherborard</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Pricing</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Graphics Card</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">FAQ</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Processor</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">RAM</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">ROM</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">PSU</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Cooling</a>
                     </li>
                 </nav>
             </div>
             <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 uppercase title-font ml-12">Contact</h2>
+                <h2 class="mb-3 text-sm font-medium tracking-widest text-white uppercase title-font ml-12">Contact</h2>
                 <nav class="mb-10 list-none flex flex-col">
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Send a Message</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Send a Message</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">Request a Quote</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">Request a Quote</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-500 cursor-pointer hover:text-gray-900">+123-456-7890</a>
+                        <a class="text-gray-300 cursor-pointer hover:text-gray-400">+91 9638051095</a>
                     </li>
                 </nav>
             </div>
         </div>
     </div>
-    <div class="bg-gray-300">
-        <div class="container px-5 py-4 mx-auto">
-            <p class="text-sm text-gray-700 capitalize xl:text-center">© 2020 All rights reserved </p>
-        </div>
-    </div>
+
 </footer>

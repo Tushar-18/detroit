@@ -17,7 +17,7 @@
     <div class="images">
         <div class="box-border bg-gradient-to-r from-black p1">
            <div class="text-large box-border text-white">
-               <p class="t0">DETROIT</p>
+               <img src="Images/white-logo.png" alt="logo images" class="t0">
              
            </div>
            <div class="text-small box-border text-white">
