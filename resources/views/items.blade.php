@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,9 @@
      <title>Document</title>
      @vite('resources/css/app.css')
 </head>
-<body>
-     <body class="bg-white p-20">
+@section('index')
+     <body class="bg-white">
+      <div class="p-20">
           <div class="bg-gray-300   w-auto h-auto p-20 flex rounded-lg">
                 <div class="first-part">
                       <img src="images/keyboard.jpg" class=" w-96 h-96 hover:transition delay-75 duration-300 ease-in-out hover:-translate-y-1" alt="errer">
@@ -30,5 +32,7 @@
                       
                 </div>
           </div>
+      </div>
+      @endsection
 </body>
 </html>
