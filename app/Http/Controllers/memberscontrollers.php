@@ -77,7 +77,7 @@ class memberscontrollers extends Controller
         return redirect('/');
     }
 
-    public function fetch_user(){
+    public function fetch_user(Request $req){
         $data = Members::select()->get();
         return view('admin/dashboard',compact('data'));
     }

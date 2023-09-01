@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\DB;
 
 class productController extends Controller
 {
@@ -34,6 +35,22 @@ class productController extends Controller
     }
     public function cart_in(Request $req){
       
+    }
+    public function status_product($id){
+        $data = Products::where('product_id', $id)->first();
+        if($data['product_status'] == "Active"){
+            DB::table('Products')
+                ->where('product_id', $id)
+                ->update(['product_status' => 'Inactive']);
+            return redirect('admin/product');
+
+        }
+        else{
+            DB::table('Products')
+                ->where('product_id', $id)
+                ->update(['product_status' => 'Active']);
+                return redirect('admin/product');
+        }
     }
     
 }

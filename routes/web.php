@@ -40,4 +40,5 @@ Route::view("admin/product-form","admin/product-form");
 Route::post("admin/product-action",[productController::class,'add_product']);
 Route::view("admin/product","admin/admin-product");
 Route::get("admin/product",[productController::class,'products']);
+Route::get("/status/{id}",[productController::class,'status_product']);
 
