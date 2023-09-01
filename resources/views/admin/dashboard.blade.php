@@ -38,7 +38,7 @@
                                 <div class="relative h-10 w-10">
                                     <img class="h-full w-full rounded-full object-cover object-center"
                                         src="../profile_pic/{{ $d['user_pic'] }}" alt="" />
-                                    @if ($d['product_status'] == 'Active')
+                                    @if ($d['user_status'] == 'Active')
                                         <span
                                             class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
                                     @else
@@ -72,13 +72,13 @@
                             <td class="px-6 py-4" style="width: 200px">
                                 <span>{{ $d['created_at'] }}</span>
                             </td>
-                            @if ($d['product_status'] == 'Active')
+                            @if ($d['user_status'] == 'Active')
                                 <td class="px-6 py-4" style="width: 200px">
                                     <span
                                         class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
                                         <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
                                         <a
-                                            href="{{ URL::to('/') }}/status/{{ $d['product_id'] }}">{{ $d['product_status'] }}</a>
+                                            href="{{ URL::to('/') }}/user_status/{{ $d['user_email'] }}">{{ $d['user_status'] }}</a>
                                     </span>
                                 </td>
                             @else
@@ -87,7 +87,7 @@
                                         class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600">
                                         <span class="h-1.5 w-1.5 rounded-full bg-red-600"></span>
                                         <a
-                                            href="{{ URL::to('/') }}/status/{{ $d['product_id'] }}">{{ $d['product_status'] }}</a>
+                                            href="{{ URL::to('/') }}/user_status/{{ $d['user_email'] }}">{{ $d['user_status'] }}</a>
                                     </span>
                                 </td>
                             @endif

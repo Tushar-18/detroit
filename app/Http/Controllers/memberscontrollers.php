@@ -7,6 +7,7 @@ use App\Models\Members;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class memberscontrollers extends Controller
 {
@@ -80,5 +81,20 @@ class memberscontrollers extends Controller
     public function fetch_user(Request $req){
         $data = Members::select()->get();
         return view('admin/dashboard',compact('data'));
+    }
+    public function status_users($id)
+    {
+        $data = Members::where('user_email', $id)->first();
+        if ($data['user_status'] == "Active") {
+            DB::table('members')
+            ->where('user_email', $id)
+                ->update(['user_status' => 'Inactive']);
+            return redirect('admin/dashboard');
+        } else {
+            DB::table('members')
+            ->where('user_email', $id)
+                ->update(['user_status' => 'Active']);
+            return redirect('admin/dashboard');
+        }
     }
 }
