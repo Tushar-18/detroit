@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\memberscontrollers;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\cartController;
 use App\Models\Products;
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/', function () {
   $data = Products::select()->get();
   return view('index')->with(compact('data'));
 });
+Route::view('/index','index');
 Route::view('/register','register');
 Route::view('/navigation','navigation');
 Route::post('/register-action',[memberscontrollers::class,'add_users']);
@@ -32,6 +34,10 @@ Route::view('/product-details','product-details');
 // Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
 Route::view("items","items");
+Route::view("add-cart",[memberscontrollers::class,'add-cart']);
+Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
+// Route::get("catagories", "catagories");
+// Route::get("catagories", [productController::class, 'cat']);
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
