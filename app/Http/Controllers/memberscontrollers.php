@@ -68,6 +68,7 @@ class memberscontrollers extends Controller
             $req->session()->put('email',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
             $req-> session()->put('name',$result['user_name']);
+            $req-> session()->put('user_id',$result['user_id']);    
             $req-> session()->put('pic',$result['user_pic']);
 
             return redirect('/');

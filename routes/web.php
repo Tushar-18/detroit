@@ -33,7 +33,7 @@ Route::view('/reset_pwd','reset_pwd');
 Route::view('/product-details','product-details');
 Route::view("admin.product-form","admin/product-form");
 Route::view("items","items");
-Route::get("add-cart",[cartController::class,'add_cart']);
+Route::get("add-cart/{product_id}",[cartController::class,'add_cart']);
 Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
 Route::view('edit_profile', 'edit_profile');

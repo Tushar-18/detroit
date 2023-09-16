@@ -59,7 +59,7 @@
             </div>
             <div class="flex items-center justify-between">
                 <span class="text-3xl font-bold text-black">₹{{$d['product_price']}}</span>
-                <a href="{{URL::to('/')}}/cart/{{$d['product_id']}}" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
+                <a href="{{URL::to('/')}}/add-cart/{{$d['product_id']}}" class="text-white    bg-black hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-500 btn-hover">Add to cart</a>
                 {{-- <a href="cart"><Button class="add-to-cart" type="submit">Add to Cart</Button></a> --}}
             </div>
         </div>
