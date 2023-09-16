@@ -37,6 +37,7 @@ Route::get("add-cart/{product_id}",[cartController::class,'add_cart']);
 Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
 Route::view('edit_profile', 'edit_profile');
+Route::get('account_activation/{email}', [memberscontrollers::class, 'account_activation']);
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');

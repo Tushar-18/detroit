@@ -41,17 +41,37 @@ class memberscontrollers extends Controller
             session()->flash('succ', 'Data saved successfully');
         $email = $req->em;
         $fn = $req->fn;
-        $data=['email'=>$email,'fn'=>$fn];
+        $data=['em'=>$email,'fn'=>$fn];
         Mail::send('register_template',["data1"=>$data],function($message)use($data){
             
-            $message->to($data['email'],$data['fn']);
-            $message->from("hnananiya813@rku.ac.in","Harshit");
+            $message->to($data['em'],$data['fn']);
+            $message->from("travaliya519@rku.ac.in","Tushar");
         });
         } else {
             session()->flash('err', 'error in saving data');
         }
         $data = Members::select()->get();
         return view('index',compact('data'));
+    }
+    public function account_activation($email)
+    {
+        $result = members::where("user_email",$email)->first();
+        if (empty($result)) {
+            session()->flash('error', 'Your account is not registered. kindly register here.');
+            return redirect('register');
+        } else {
+            if ($result->user_status == 'Active') {
+                session()->flash('success', 'Your account is already activated kindly login');
+            } else {
+                $update = members::where('user_email', $email)->update(array('user_status' => 'Active'));
+                if ($update) {
+                    session()->flash('success', 'Your account is activated successfully. kindly login');
+                } else {
+                    session()->flash('error', 'Account activation failed please try after sometime.');
+                }
+            }
+            return redirect('login');
+        }
     }
     public function fech_user(){
         $data = Members::select()->get();
