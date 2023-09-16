@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Members;
 use App\Models\Products;
 use App\Models\Cart;
-use Illuminate\Support\Facades\DB;
 
 
 class cartController extends Controller
@@ -31,4 +29,11 @@ class cartController extends Controller
 
 
      }
+     public function fetch_cart(){
+          $cart = Cart::select()->get();
+          // $data = Products::select()->get();
+          $product = Products::select()->get();     
+          return view('cart',compact('cart','product'));
+     }
+
 }

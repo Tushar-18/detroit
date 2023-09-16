@@ -28,6 +28,8 @@ Route::view('/login','login');
 Route::get('/logout',[memberscontrollers::class,'logout']);
 Route::post('/login-action',[memberscontrollers::class,'login']);
 Route::view('/cart/{cart_id}','cart'); 
+Route::view('/cart','cart'); 
+Route::get('/cart',[cartController::class,'fetch_cart']);
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
 Route::view('/product-details','product-details');

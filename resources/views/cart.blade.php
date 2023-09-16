@@ -22,11 +22,11 @@
                 <!-- Product Information -->
                 <div class="flex flex-row gap-6 items-center">
                     <div class="w-28 h-28">
-                        <img class="w-full h-full" src="https://static.netshoes.com.br/produtos/tenis-adidas-coreracer-masculino/09/NQQ-4635-309/NQQ-4635-309_zoom1.jpg?ts=1675445414&ims=544x">
+                        <img class="w-full h-full" src="product_pic/">
                     </div>
                     <div class="flex flex-col gap-1">
-                        <p class="text-lg text-white font-semibold">Adidas Coreracer Men's Shoes</p>
-                        <p class="text-xs text-white font-semibold">Color: <span class="font-normal">Black + Zinc</span></p>
+                        <p class="text-lg text-white font-semibold">{{$product[4]}}</p>
+                        <p class="text-xs text-white font-semibold">{{$cart['1']}}<span class="font-normal">Black + Zinc</span></p>
                         <p class="text-xs text-white font-semibold">Size: <span class="font-normal">42</span></p>
                     </div>
                 </div>
