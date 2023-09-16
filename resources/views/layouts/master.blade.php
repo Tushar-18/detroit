@@ -39,7 +39,8 @@
         <div class="pro-in ">
             <img class="border border-slate-600" src="{{URL::to('/')}}/profile_pic/{{session('pic')}}" alt="error" id="signin">
         </div>
-        <label for="signin" style="margin-right: 10px">{{session('name')}}</label>
+        <a href="edit_profile">
+        <label for="signin" style="margin-right: 10px">{{session('name')}}</label></a>
         
 <div class="border-l-2 h-10 border-slate-600"></div>
         <div class="log bg-zinc-300 px-5 py-2 rounded-3xl btn-hover ml-5 hover:bg-zinc-400"><a href="logout" >Logout</a></div>

@@ -31,13 +31,12 @@ Route::view('/cart','cart');
 Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
 Route::view('/product-details','product-details');
-// Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
 Route::view("items","items");
 Route::get("add-cart",[cartController::class,'add_cart']);
 Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
-// Route::get("catagories", [productController::class, 'cat']);
+Route::view('edit_profile', 'edit_profile');
 
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
