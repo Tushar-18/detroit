@@ -64,7 +64,7 @@ class memberscontrollers extends Controller
             return "invalid username and password";
         }
         
-        else if($result['user_role'] == "user"){
+        else if($result['user_role'] == "user" && $result['user_status'] == "Active"){
             $req->session()->put('email',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
             $req-> session()->put('name',$result['user_name']);
@@ -73,13 +73,16 @@ class memberscontrollers extends Controller
 
             return redirect('/');
         }
-        else{
+        else if($result['user_role'] == "Admin"&& $result['user_status'] == "Active"){
             $req->session()->put('email', $result['user_email']);
             $req->session()->put('pwd', $result['user_pwd']);
             $req->session()->put('name', $result['user_name']);
             $req->session()->put('pic', $result['user_pic']);
 
             return redirect('/admin/dashboard');
+        }
+        else{
+            return "Inactive Account";
         }
     }
     public function logout(Request $req){
