@@ -1,12 +1,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <link rel="stylesheet" href="css/nav.css">
-
+    <link rel="stylesheet" href="{{URL::to('/')}}/css/nav.css">
+ {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 </head>
 <div class="container-main bg-zinc-200">
     <header class="header active">
-        <div class="logo"><img src="Images/black-logo.png" alt="error"></div>
+        <div class="logo"><img src="{{URL::to('/')}}/Images/black-logo.png" alt="error"></div>
         <nav class="nav">
             <ul class="c1">
                 <li><a href="">Home</a></li>
@@ -17,12 +17,12 @@
 
 
                     <ul>
-                        <li><a href="Motherboard">Motherboard</a></li>
-                        <li><a href="Graphics">Graphics Card</a> </li>
-                        <li><a href="Processor">Processor</a></li>
-                        <li><a href="Ram">Ram</a></li>
-                        <li><a href="Rom">Rom</a></li>
-                        <li><a href="PSU">PSU</a></li>
+                        <li><a href="{{URL::to('/')}}/catagorie/motherboard">Motherboard</a></li>
+                        <li><a href="{{URL::to('/')}}/catagorie/graphics">Graphics Card</a> </li>
+                        <li><a href="{{URL::to('/')}}/catagorie/processor">Processor</a></li>
+                        <li><a href="{{URL::to('/')}}/catagorie/ram">Ram</a></li>
+                        <li><a href="{{URL::to('/')}}/catagorie/rom">Rom</a></li>
+                        <li><a href="{{URL::to('/')}}/catagorie/psu">PSU</a></li>
                         <li><a>Cooling</a></li>
                     </ul>
                 </li>
@@ -31,13 +31,13 @@
         </nav>
         <div class="profile">
             @if(session()->has('email'))
-                <div class="cart px-3 hover:animate-bounce"><a href="cart" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <div class="cart px-3 hover:animate-bounce "><a href="cart" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                 </svg>
             </a>
         </div>
         <div class="pro-in ">
-            <img class="border border-slate-600" src="profile_pic/{{session('pic')}}" alt="error" id="signin">
+            <img class="border border-slate-600" src="{{URL::to('/')}}/profile_pic/{{session('pic')}}" alt="error" id="signin">
         </div>
         <label for="signin" style="margin-right: 10px">{{session('name')}}</label>
         
@@ -70,7 +70,7 @@
         class="container flex align-middle flex-wrap px-8 py-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div class="flex-shrink-0 w-64 mx-auto mt-20 text-center md:mx-0 md:text-left">
             <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
-               <img src="images/black-logo.png" alt="error">
+               <img src="{{URL::to('/')}}/images/black-logo.png" alt="error">
             </a>
             <p class="mt-2 text-sm text-black">Pc components, Keyboard and Mouse</p>
             <div class="mt-4">

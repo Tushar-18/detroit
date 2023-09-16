@@ -20,5 +20,17 @@ class cartController extends Controller
           // ->select('students.name')
           // ->where('branch','sds')
           ->get();
+
+
+          $users = DB::table("users AS a")
+          ->select(array(
+               "a.id as user_id", "a.username", "b.voteOn as upvote_on",
+               "b.vote as upvote", "b.voteAdded as upvote_added", "c.voteOn as downvote_on",  "c.vote as downvote",
+               "c.voteAdded as downvote_added"
+          ))
+          ->join("upvotes AS b",  "a.id", "=", "b.voteBy")
+               ->join("downvotes AS c",  "a.id", "=", "c.voteBy")
+               ->orderBy("b.voteAdded", "asc")
+               ->get();
      }
 }

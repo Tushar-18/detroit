@@ -34,9 +34,9 @@ Route::view('/product-details','product-details');
 // Route::get('/index',[productController::class,'products']);
 Route::view("admin.product-form","admin/product-form");
 Route::view("items","items");
-Route::view("add-cart",[memberscontrollers::class,'add-cart']);
+Route::get("add-cart",[cartController::class,'add_cart']);
+Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
-// Route::get("catagories", "catagories");
 // Route::get("catagories", [productController::class, 'cat']);
 
 // Admin

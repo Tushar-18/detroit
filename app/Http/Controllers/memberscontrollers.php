@@ -64,13 +64,21 @@ class memberscontrollers extends Controller
             return "invalid username and password";
         }
         
-        else{
+        else if($result['user_role'] == "user"){
             $req->session()->put('email',$result['user_email']);
             $req-> session()->put('pwd',$result['user_pwd']);
             $req-> session()->put('name',$result['user_name']);
             $req-> session()->put('pic',$result['user_pic']);
 
             return redirect('/');
+        }
+        else{
+            $req->session()->put('email', $result['user_email']);
+            $req->session()->put('pwd', $result['user_pwd']);
+            $req->session()->put('name', $result['user_name']);
+            $req->session()->put('pic', $result['user_pic']);
+
+            return redirect('/admin/dashboard');
         }
     }
     public function logout(Request $req){

@@ -56,8 +56,9 @@ class productController extends Controller
 
     public function fetch_cat($cat_id)
     {
-        $val = Products::where('product_catagory',$cat_id)->get();
-        $data = compact('val');
-        return view('catagories')->with(compact('data'));
+        $data = Products::where('product_catagory',$cat_id)->get();
+        // $data = compact('val');
+        // return view('catagories')->with(compact('data'));
+        return view('catagories', compact('data'));
     }
 }
