@@ -91,14 +91,6 @@ class memberscontrollers extends Controller
         $data = Members::select()->get();
         return view('admin/dashboard',compact('data'));
     }
-    public function check(){
-        if(session('name') == ""){
-            return view('login');
-        }
-        else{
-            return view('cart');
-        }
-    }
     public function status_users($id)
     {
         $data = Members::where('user_email', $id)->first();
