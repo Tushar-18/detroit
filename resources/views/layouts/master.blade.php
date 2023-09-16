@@ -18,7 +18,7 @@
 
                     <ul>
                         <li><a href="{{URL::to('/')}}/catagorie/motherboard">Motherboard</a></li>
-                        <li><a href="{{URL::to('/')}}/catagorie/graphics">Graphics Card</a> </li>
+                        <li><a href="{{URL::to('/')}}/catagorie/Graphics card">Graphics Card</a> </li>
                         <li><a href="{{URL::to('/')}}/catagorie/processor">Processor</a></li>
                         <li><a href="{{URL::to('/')}}/catagorie/ram">Ram</a></li>
                         <li><a href="{{URL::to('/')}}/catagorie/rom">Rom</a></li>
@@ -37,7 +37,7 @@
             </a>
         </div>
         <div class="pro-in ">
-            <img class="border border-slate-600" src="{{URL::to('/')}}/profile_pic/{{session('pic')}}" alt="error" id="signin">
+            <a href="edit_profile"><img class="border border-slate-600" src="{{URL::to('/')}}/profile_pic/{{session('pic')}}" alt="error" id="signin"></a>
         </div>
         <a href="edit_profile">
         <label for="signin" style="margin-right: 10px">{{session('name')}}</label></a>
