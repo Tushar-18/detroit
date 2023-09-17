@@ -41,6 +41,11 @@ Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
 Route::view('edit_profile', 'edit_profile');
 Route::get('account_activation/{email}', [memberscontrollers::class, 'account_activation']);
 
+Route::get('/decrease/{id}/{qua}', [cartController::class, 'decrease']);
+Route::get('/increase/{id}/{qua}', [cartController::class, 'increase']);
+Route::get('/drop/{id}/', [cartController::class, 'drop_cart_item']);
+
+
 // Admin
 Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);
@@ -50,4 +55,4 @@ Route::view("admin/product","admin/admin-product");
 Route::get("admin/product",[productController::class,'products']);
 Route::get("/status/{id}",[productController::class,'status_product']);
 Route::get("/user_status/{id}",[memberscontrollers::class,'status_users']);
-
+Route::view("admin/edit_userprofile", "admin/edit_userprofile");

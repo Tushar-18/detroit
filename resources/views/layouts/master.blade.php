@@ -45,7 +45,7 @@
 <div class="border-l-2 h-10 border-slate-600"></div>
         <div class="log bg-zinc-300 px-5 py-2 rounded-3xl btn-hover ml-5 hover:bg-zinc-400"><a href="logout" >Logout</a></div>
             @else
-                <label for="Login" style="margin-right: 10px" class="bg-zinc-300 px-5 py-2 rounded-3xl btn-hover hover:bg-zinc-400"><a href="login">Login</a></label>
+                <label for="Login" style="margin-right: 10px" class="bg-zinc-300 px-5 py-2 rounded-3xl btn-hover hover:bg-zinc-400"><a href="{{URL::to('/')}}/login">Login</a></label>
         @endif
             
             <div class="menutoggle">

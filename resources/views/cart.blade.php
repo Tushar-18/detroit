@@ -17,17 +17,18 @@
         <p class="text-white text-xl font-extrabold">My cart</p>
 
         <!-- Product -->
-        <div class="flex flex-col p-4 text-lg font-semibold shadow-md  rounded-3x border-black rounded-sm bg-zinc-700">
+        @foreach ($data as $d)
+            <div class="flex flex-col p-4 text-lg font-semibold shadow-md  rounded-3x border-black rounded-sm bg-zinc-700">
             <div class="flex flex-col md:flex-row gap-3 justify-between">
                 <!-- Product Information -->
                 <div class="flex flex-row gap-6 items-center">
                     <div class="w-28 h-28">
-                        <img class="w-full h-full" src="product_pic/">
+                        <img class="w-full h-full" src="{{URL::to('/')}}/product_pic/{{$d['product_images']}}">
                     </div>
                     <div class="flex flex-col gap-1">
-                        <p class="text-lg text-white font-semibold">{{$product[4]}}</p>
-                        <p class="text-xs text-white font-semibold">{{$cart['1']}}<span class="font-normal">Black + Zinc</span></p>
-                        <p class="text-xs text-white font-semibold">Size: <span class="font-normal">42</span></p>
+                        <p class="text-lg text-white font-semibold">{{$d['product_name']}}</p>
+                        <p class="text-xs text-white font-semibold"><span class="font-normal">{{$d['product_brand']}}</span></p>
+                        <p class="text-xs text-white font-semibold">{{$d['product_catagory']}}</span></p>
                     </div>
                 </div>
                 <!-- Price Information -->
@@ -35,30 +36,31 @@
                     <p class="text-white font-normal text-sm line-through">$99.99
                         <span class="text-emerald-500 ml-2">(-50% OFF)</span>
                     </p>
-                    <p class="text-white font-normal text-xl ">$49.99</p>
+                    <p class="text-white font-normal text-xl ">{{$d['product_price']}}</p>
                 </div>
                 <!-- Remove Product Icon -->
                 <div class="self-center">
-                    <button class="transition-colors text-sm bg-red-600 hover:bg-red-700 p-2 rounded-sm w-24 text-white text-hover shadow-md btn-hover">
+                    <a href="{{URL::to('/')}}/drop/{{$d['product_id']}}" class="transition-colors text-sm bg-red-600 hover:bg-red-700 p-2 rounded-sm w-24 text-white text-hover shadow-md btn-hover">
                         Cancel  
-                </button>
+                </a>
                 </div>
             </div>
             <!-- Product Quantity -->
             <div class="flex flex-row self-center gap-1">
-                <button class="w-5 h-5 self-center rounded-full border border-gray-300 decrement">
+                <a href="{{URL::to('/')}}/decrease/{{$d['product_id']}}/{{$d['product_quantity']}}" class="w-5 h-5 self-center rounded-full border border-gray-300 decrement">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14" />
                     </svg>
-                </button>
-                <input type="text" readonly="readonly" value="1" class="w-8 h-8 text-center bg-zinc-600 text-black text-sm outline-none border border-gray-300 rounded-sm">
-                <button class="w-5 h-5 self-center rounded-full border border-gray-300  increment">
+                </a>
+                <input type="text" readonly="readonly" value="{{$d['product_quantity']}}" class="w-8 h-8 text-center bg-zinc-600 text-black text-sm outline-none border border-gray-300 rounded-sm">
+                <a href="{{URL::to('/')}}/increase/{{$d['product_id']}}/{{$d['product_quantity']}}" class="w-5 h-5 self-center rounded-full border border-gray-300  increment">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 5v14M5 12h14" />
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
+        @endforeach
     </div>
 
     <!-- Purchase Resume -->
@@ -93,7 +95,7 @@
                 <button class="transition-colors text-sm bg-blue-600 hover:bg-blue-700 p-2 rounded-sm w-64 text-white text-hover shadow-md btn-hover">
                         FINISH  
                 </button>
-                <a href="home">
+                <a href="/">
                 <button class="transition-colors text-sm bg-white border border-gray-600 p-2 rounded-sm w-60 text-black text-hover shadow-md btn-hover">
                         ADD MORE PRODUCTS
                 </button></a>

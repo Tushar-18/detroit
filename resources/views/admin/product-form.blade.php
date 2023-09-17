@@ -1,3 +1,5 @@
+@extends('../layouts/admin-side-navbar')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +9,9 @@
 @vite('resources/css/app.css')
 
 </head>
-<body class="bg-zinc-900">
-  <section class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-zinc-700 mt-20">
+<body>
+    @section('content')
+  <section class="max-w-4xl p-6 mx-auto w-3/4 bg-indigo-600 rounded-md shadow-md dark:bg-zinc-700 mt-10">
     <h1 class="text-xl font-bold text-white capitalize dark:text-white">Add Product </h1>
     <form action="product-action" method="post" enctype="multipart/form-data">
       @csrf
@@ -145,5 +148,5 @@
         </div>
     </form>
 </section>
-
- 
+@endsection
+</body></html>
