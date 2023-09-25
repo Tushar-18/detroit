@@ -6,7 +6,7 @@
 </head>
 <div class="container-main bg-zinc-200">
     <header class="header active">
-        <div class="logo"><img src="{{URL::to('/')}}/Images/black-logo.png" alt="error"></div>
+        <div class="logo"><a href="/"><img src="{{URL::to('/')}}/Images/black-logo.png" alt="error"></a></div>
         <nav class="nav">
             <ul class="c1">
                 <li><a href="/">Home</a></li>
@@ -70,7 +70,7 @@
     <div
         class="container flex align-middle flex-wrap px-8 py-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div class="flex-shrink-0 w-64 mx-auto mt-20 text-center md:mx-0 md:text-left">
-            <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+            <a href="/" class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                <img src="{{URL::to('/')}}/images/black-logo.png" alt="error">
             </a>
             <p class="mt-2 text-sm text-black">Pc components, Keyboard and Mouse</p>
@@ -115,25 +115,25 @@
                 </h2>
                 <nav class="mb-10 list-none flex flex-col">
                     <li class="mt-3">
-                        <a href="{{ URL::to('/') }}/catagorie/keyboard" class="text-black cursor-pointer hover:text-gray-400">Motherborard</a>
+                        <a href="{{URL::to('/')}}/catagorie/motherboard" class="text-black cursor-pointer hover:text-gray-400">Motherborard</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">Graphics Card</a>
+                        <a href="{{URL::to('/')}}/catagorie/Graphics card"class="text-black cursor-pointer hover:text-gray-400">Graphics Card</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">Processor</a>
+                        <a href=""class="text-black cursor-pointer hover:text-gray-400">Processor</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">RAM</a>
+                        <a href="{{URL::to('/')}}/catagorie/processor"class="text-black cursor-pointer hover:text-gray-400">RAM</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">ROM</a>
+                        <a href="{{URL::to('/')}}/catagorie/ram"class="text-black cursor-pointer hover:text-gray-400">ROM</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">PSU</a>
+                        <a href="{{URL::to('/')}}/catagorie/rom"class="text-black cursor-pointer hover:text-gray-400">PSU</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">Cooling</a>
+                        <a href="{{URL::to('/')}}/catagorie/psu"class="text-black cursor-pointer hover:text-gray-400">Cooling</a>
                     </li>
                 </nav>
             </div>

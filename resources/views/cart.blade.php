@@ -36,7 +36,7 @@
                     <p class="text-white font-normal text-sm line-through">$99.99
                         <span class="text-emerald-500 ml-2">(-50% OFF)</span>
                     </p>
-                    <p class="text-white font-normal text-xl ">{{$d['product_price']}}</p>
+                    <p class="text-white font-normal text-xl ">₹{{$d['product_price']}}</p>
                 </div>
                 <!-- Remove Product Icon -->
                 <div class="self-center">
