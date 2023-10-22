@@ -33,9 +33,6 @@ class productController extends Controller
         $data = Products::select()->get();
         return view('/admin/admin-product',compact('data'));
     }
-    public function cart_in(Request $req){
-      
-    }
     public function status_product($id){
         $data = Products::where('product_id', $id)->first();
         if($data['product_status'] == "Active"){
@@ -52,13 +49,9 @@ class productController extends Controller
                 return redirect('admin/product');
         }
     }
-
-
     public function fetch_cat($cat_id)
     {
         $data = Products::where('product_catagory',$cat_id)->get();
-        // $data = compact('val');
-        // return view('catagories')->with(compact('data'));
         return view('catagories', compact('data'));
     }
 }
