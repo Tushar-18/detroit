@@ -12,7 +12,7 @@ use function PHPUnit\Framework\isEmpty;
 class cartController extends Controller
 {
      public function add_cart($product_id){
-         if(session()->has('email')){
+         if(session()->has('email')){   
                 $data = DB::table('carts')
                ->where('user_id', session('user_id'))
                ->where('product_id', $product_id)->get();

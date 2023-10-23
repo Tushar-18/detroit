@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admincontroler;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\memberscontrollers;
 use App\Http\Controllers\productController;
@@ -47,7 +48,7 @@ Route::get('/drop/{id}/', [cartController::class, 'drop_cart_item']);
 
 
 // Admin
-Route::view('/admin/dashboard','/admin/dashboard');
+// Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);
 Route::view("admin/product-form","admin/product-form");
 Route::post("admin/product-action",[productController::class,'add_product']);
@@ -57,4 +58,7 @@ Route::get("/status/{id}",[productController::class,'status_product']);
 Route::get("/user_status/{id}",[memberscontrollers::class,'status_users']);
 Route::view("admin/edit_userprofile", "admin/edit_userprofile");
 Route::view("admin/add_user", "admin/add_user");
-Route::view('admin/edit_member', 'admin_edit_member');
+
+// Route::view('admin/edit_member', 'admin_edit_member');
+Route::view("/edit_member","admin/admin_edit_member");
+Route::get("/delete_member",[admincontroler::class,'delete_member']);
