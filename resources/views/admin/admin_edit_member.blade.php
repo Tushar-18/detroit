@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>edit member</title>
 @vite('resources/css/app.css')
 
@@ -128,10 +129,8 @@
                   {{ $message }}
               @enderror
           </span>
-            </div>
-           
+            </div>       
         </div>
-
         <div class="flex justify-end mt-6">
             <button type="submit" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-800 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-gray-600">Add Members</button>
         </div>

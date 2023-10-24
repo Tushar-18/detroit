@@ -67,11 +67,17 @@ class cartController extends Controller
      }
      public function decrease($id , $qua)
      {
+          if($qua < 2)
+          {
+               return $this->drop_cart_item($id);
+          }else{
+
           $qua--;
           DB::table('carts')
                ->where('user_id', session('user_id'))
                ->where('product_id', $id)
                ->update(['product_quantity' => $qua]);
+          }
           return $this->fetch_cart();
      }
      public function drop_cart_item($id)

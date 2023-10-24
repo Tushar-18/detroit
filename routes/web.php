@@ -58,5 +58,7 @@ Route::get("/status/{id}",[productController::class,'status_product']);
 Route::get("/user_status/{id}",[memberscontrollers::class,'status_users']);
 Route::view("admin/edit_userprofile", "admin/edit_userprofile");
 Route::view("admin/add_user", "admin/add_user");
+
+// Route::view('admin/edit_member', 'admin_edit_member');
 Route::view("/edit_member","admin/admin_edit_member");
 Route::get("/delete_member",[admincontroler::class,'delete_member']);
