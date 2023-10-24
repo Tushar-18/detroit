@@ -27,7 +27,8 @@ class productController extends Controller
         }
         $data = Products::select()->get();
         // return view('/index',compact('data'));
-        return redirect('/')->with(compact('data'));
+        // return redirect('/')->with(compact('data'));
+        return $this->products();
     }
     public function products(){
         $data = Products::select()->get();

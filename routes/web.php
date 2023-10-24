@@ -62,3 +62,4 @@ Route::view("admin/add_user", "admin/add_user");
 // Route::view('admin/edit_member', 'admin_edit_member');
 Route::view("/edit_member","admin/admin_edit_member");
 Route::get("/delete_member",[admincontroler::class,'delete_member']);
+Route::get("/delete_product/{id}",[admincontroler::class,'delete_product']);
