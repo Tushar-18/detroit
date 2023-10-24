@@ -5,6 +5,8 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
+use App\Models\Members;
+use App\Models\Orders;
 
 class productController extends Controller
 {
@@ -64,14 +66,30 @@ class productController extends Controller
         $data = Products::where('product_catagory',$cat_id)->get();
         return view('catagories', compact('data'));
     }
-    public function orders(){
-        $data = Products::select()->get();
-        return view('orders', compact('data'));
-    }
+    public function order($id)
+    {
+        if (session()->has('email')) {
 
-    public function items($product_id){
-        $data = Products::where('product_id',$product_id)->first();
-        return view('items',compact('data'));
+            $result = Products::where('product_id', $id)->first();
+            $cart = new Orders();
+            $cart->user_id = session('user_id');
+            $cart->product_id = $result['product_id'];
+            $cart->product_pic = $result['product_pic'];
+            $cart->product_name = $result['product_name'];
+            $cart->user_email = session('email');
+            $cart->user_name = session('name');
+            $cart->order_quantity = $result['quantity'];
+            $cart->order_price = $result['price'];
+            $cart->save();
+            return redirect()->back();
+        } else {
+            return view('login');
+        }
     }
-    
+    public function fetch_orders()
+    {
+        $data = Orders::select()->get();
+        $member = Members::select()->get();
+        return view('admin/orders', compact('data', 'member'));
+    }
 }

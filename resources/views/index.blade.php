@@ -34,7 +34,7 @@
             <img class=" rounded-md align-middle h-56 " width="400px" src="product_pic/{{$d['product_images']}}" alt="product image" />
         </div>
         <div class="px-5 pb-5">
-            <a href="{{URL::to("/")}}/items/{{$d['product_id']}}">
+            <a href="items">
                 <h5 class="text-xl font-semibold tracking-tight  dark:text-black">{{$d['product_name']}}</h5>
             </a>
                 <p class="font-semibold tracking-tight text-black dark:text-blue-600">Remaining only {{$d['product_quantity']}} items</p>
