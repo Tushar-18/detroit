@@ -132,7 +132,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex justify-end gap-4">
 
-                                    <a x-data="{ tooltip: 'Delete' }" href="{{ URL::to('/') }}/edit_member">
+                                    <a x-data="{ tooltip: 'Delete' }" href="{{ URL::to('/') }}/edit_member/{{$d['user_id']}}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="h-6 w-6"

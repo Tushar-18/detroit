@@ -32,7 +32,7 @@
                     <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                         <div>
                             <label class="text-black " for="username">fullname</label>
-                            <input id="username" type="text" name="fn" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="username" type="text" name="fn" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('fn') }}">
                             <span style="color:red">
                                         @error('fn')
                                             {{ $message }}
@@ -41,7 +41,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="emailAddress">Email Address</label>
-                            <input id="emailAddress" type="email" name="em" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="emailAddress" type="email" name="em" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('em') }}">
                             <span style="color:red">
                         @error('em')
                             {{ $message }}
@@ -51,7 +51,7 @@
             
                         <div>
                             <label class="text-black" for="password">Password</label>
-                            <input id="password" type="password" name="pwd" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="password" type="password" name="pwd" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('pwd') }}">
                             <span style="color:red">
                         @error('pwd')
                             {{ $message }}
@@ -61,7 +61,7 @@
             
                         <div>
                             <label class="text-black" for="passwordConfirmation">Password Confirmation</label>
-                            <input id="passwordConfirmation" name="cpwd" type="password" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="passwordConfirmation" name="cpwd" type="password" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('cpwd') }}">
                             <span style="color:red">
                         @error('cpwd')
                             {{ $message }}
@@ -70,7 +70,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="pin">Pincode</label>
-                            <input id="pin" type="number" name="pin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="pin" type="number" name="pin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('pin') }}">
                             <span style="color:red">
                         @error('pin')
                             {{ $message }}
@@ -79,7 +79,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="passwordConfirmation">City</label>
-                            <select name="city" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <select name="city" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('city') }}">
                                 <option value="">Select City</option>
                                 <option value="Rajkot">Rajkot</option>
                                 <option value="Surat">Surat</option>
@@ -94,7 +94,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="states">States</label>
-                            <input name="states" id="states" type="text" class="block w-full py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:outline  focus:ring-blue-500">
+                            <input name="states" id="states" type="text" class="block w-full py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:outline  focus:ring-blue-500" value="{{ old('states') }}">
                             <span style="color:red">
                         @error('states')
                             {{ $message }}
@@ -103,7 +103,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="number">number</label>
-                            <input id="number" name="num" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">
+                            <input id="number" name="num" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500" value="{{ old('num') }}">
                             <span style="color:red">
                         @error('num')
                             {{ $message }}
@@ -112,7 +112,7 @@
                         </div>
                         <div>
                             <label class="text-black" for="address">Address</label>
-                            <textarea id="address" name="address" type="textarea" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500"></textarea>
+                            <textarea id="address" name="address" type="textarea" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-500">{{ old('address') }}</textarea>
                             <span style="color:red">
                         @error('address')
                             {{ $message }}

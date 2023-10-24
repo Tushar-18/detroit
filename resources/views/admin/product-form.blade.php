@@ -136,7 +136,7 @@
                 </div>
               </div>
               <span style="color:red">
-              @error('pic')
+              @error('product_images')
                   {{ $message }}
               @enderror
           </span>

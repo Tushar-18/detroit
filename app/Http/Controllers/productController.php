@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\DB;
 class productController extends Controller
 {
     public function add_product(Request $req) {
+        $req->validate([
+            'product_name' => 'required',
+            'product_price' => 'required',
+            'product_catagory' => 'required',
+            'product_quantity' => 'required',
+            'product_brand' => 'required',
+            'product_description' => 'required',
+            'product_images' => 'required'
+        ]);
         $product_pic_name = uniqid() . $req->file('product_images')->getClientOriginalName();
         $req->product_images->move('product_pic',$product_pic_name);
 

@@ -11,12 +11,12 @@
 <body class="">
   <section class="max-w-4xl p-6 mx-auto  rounded-md shadow-md  mt-20">
     <h1 class="text-xl font-bold  capitalize text-gray-700 ">Edit Member</h1>
-    <form action="register-action" method="post" enctype="multipart/form-data">
+    <form action="{{URL::to('/')}}/admin_update_users" method="post" enctype="multipart/form-data">
       @csrf
         <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
                 <label class="" for="username">fullname</label>
-                <input id="username" type="text" name="fn" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-gray-600 focus:border-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
+                <input id="username" type="text" name="fn" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-gray-600 focus:border-blue-600 focus:outline-none focus:ring focus:ring-blue-600" value="{{$d['user_name']}}">
                 <span style="color:red">
                             @error('fn')
                                 {{ $message }}
@@ -25,8 +25,8 @@
             </div>
             <div>
                 <label class="" for="emailAddress">Email Address</label>
-                <input id="emailAddress" type="email" name="em" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border  rounded-md  dark:border-gray-600 focus:border-blue-600 focus:outline-none focus:ring focus:ring-blue-600">
-                <span style="color:red">
+                <input id="emailAddress" type="email" name="em" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border  rounded-md  dark:border-gray-600 focus:border-blue-600 focus:outline-none focus:ring focus:ring-blue-600" value="{{$d['user_email']}}" readonly>
+                <span style="color:red" >
             @error('em')
                 {{ $message }}
             @enderror
@@ -34,27 +34,8 @@
             </div>
 
             <div>
-                <label class="" for="password">Password</label>
-                <input id="password" type="password" name="pwd" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border  rounded-md dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">
-                <span style="color:red">
-            @error('pwd')
-                {{ $message }}
-            @enderror
-        </span>
-            </div>
-
-            <div>
-                <label class="" for="passwordConfirmation">Password Confirmation</label>
-                <input id="passwordConfirmation" name="cpwd" type="password" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md   dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">
-                <span style="color:red">
-            @error('cpwd')
-                {{ $message }}
-            @enderror
-        </span>
-            </div>
-            <div>
                 <label class="" for="pin">Pincode</label>
-                <input id="pin" type="number" name="pin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">
+                <input id="pin" type="number" name="pin" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600" value="{{$d['user_pincode']}}">
                 <span style="color:red">
             @error('pin')
                 {{ $message }}
@@ -63,12 +44,11 @@
             </div>
             <div>
                 <label class="" for="passwordConfirmation">City</label>
-                <select name="city" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md dark:border-zinc-600   focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">
-                    <option value="">Select City</option>
+                <select name="city" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md dark:border-zinc-600   focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600" value="{{$d['user_city']}}">
+                    <option value="{{$d['user_city']}}">{{$d['user_city']}}</option>
                     <option value="Rajkot">Rajkot</option>
                     <option value="Surat">Surat</option>
                     <option value="junagadha">junagadha</option>
-                    <option value="Upleta">Upleta</option>
                 </select>
                 <span style="color:red">
             @error('city')
@@ -77,8 +57,8 @@
         </span>
             </div>
             <div>
-                <label class="" for="states">States</label>
-                <input name="states" id="states" type="text" class="block w-full py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:outline  focus:ring-blue-600">
+                <label class="" for="states ">States</label>
+                <input name="states" id="states" type="text" class="block w-full py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:outline  focus:ring-blue-600" value="{{$d['user_states']}}">
                 <span style="color:red">
             @error('states')
                 {{ $message }}
@@ -86,8 +66,8 @@
         </span>
             </div>
             <div>
-                <label class="" for="number">number</label>
-                <input id="number" name="num" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">
+                <label class="" for="number">Number</label>
+                <input id="number" name="num" type="number" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md  dark:border-gray-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600" value="{{$d['user_number']}}">
                 <span style="color:red">
             @error('num')
                 {{ $message }}
@@ -96,7 +76,7 @@
             </div>
             <div>
                 <label class="" for="address">Address</label>
-                <textarea id="address" name="address" type="textarea" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600"></textarea>
+                <textarea id="address" name="address" type="textarea" class="block w-full px-4 py-2 mt-2 text-zinc-700 bg-white border border-gray-300 rounded-md  dark:border-zinc-600 focus:border-blue-500  focus:outline-none focus:ring focus:ring-blue-600">{{$d['user_address']}}</textarea>
                 <span style="color:red">
             @error('address')
                 {{ $message }}
@@ -115,7 +95,7 @@
                     <div class="flex text-sm text-gray-600">
                     <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-zinc-600 hover:text-zinc-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-600">
                       <span class="">Upload a file</span>
-                      <input id="file-upload" name="pic" name="file-upload" type="file" class="sr-only">
+                    <input id="file-upload" name="pic" type="file" class="sr-only" value="{{$d['user_pic']}}">
                     </label>
                     <p class="pl-1 ">or drag and drop</p>
                   </div>
@@ -132,7 +112,7 @@
             </div>       
         </div>
         <div class="flex justify-end mt-6">
-            <button type="submit" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-800 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-gray-600">Add Members</button>
+            <button type="submit" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-blue-800 rounded-md hover:bg-blue-700 focus:outline-none focus:bg-gray-600">Edit Members</button>
         </div>
     </form>
 </section>
