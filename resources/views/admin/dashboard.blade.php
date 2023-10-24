@@ -36,7 +36,7 @@
                                 placeholder="Search">
                         </div>
                     </div>
-                    <a href="{{ URL::to('/') }}/admin/add-user"
+                    <a href="{{ URL::to('/') }}/admin/add_user"
                         class="px-5 py-2 my-2 border-blue-500 border text-blue-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">ADD
                         USER</a>
                 </div>
@@ -120,7 +120,7 @@
 
                             <td class="px-6 py-4">
                                 <div class="flex justify-end gap-4">
-                                    <a x-data="{ tooltip: 'Delete' }" href="{{URL::to('/')}}/delete_member">
+                                    <a x-data="{ tooltip: 'Delete' }" href="{{ URL::to('/') }}/delete_member">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="h-6 w-6" x-tooltip="tooltip">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -132,7 +132,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex justify-end gap-4">
 
-                                    <a x-data="{ tooltip: 'Delete' }" href="{{URL::to('/')}}/edit_member">
+                                    <a x-data="{ tooltip: 'Delete' }" href="{{ URL::to('/') }}/edit_member">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="h-6 w-6"
