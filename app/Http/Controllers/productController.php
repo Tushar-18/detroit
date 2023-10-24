@@ -73,5 +73,10 @@ class productController extends Controller
         $data = Products::where('product_id',$product_id)->first();
         return view('items',compact('data'));
     }
+
+    public function favourite(){
+        $data = Products::select()->get();
+        return view('favourite', compact('data'));
+    }
     
 }

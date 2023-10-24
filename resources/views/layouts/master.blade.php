@@ -24,6 +24,7 @@
                     </ul>
                 </li>
                 <li><a href="{{URL::to("/")}}/orders">Orders</a></li>
+                <li><a href="{{URL::to("/")}}/favourite">favourite</a></li>
             </ul>
         </nav>
         <div class="profile">

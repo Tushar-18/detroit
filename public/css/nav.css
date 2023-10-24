@@ -41,7 +41,7 @@ nav .c1 {
 }
 
 header .c1 li a {
-  margin: 20px 15px;
+  margin:0px 5px;
   padding: 0px 30px;
   font-size: 1em;
   color: #000000;
@@ -49,7 +49,7 @@ header .c1 li a {
 }
 header .c1 li{
   position: relative;
-  float: left;
+  float: right;
 }
 
 .nav .c1 li ul {

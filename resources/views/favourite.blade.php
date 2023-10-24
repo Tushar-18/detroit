@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>favourite</title>
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -27,7 +27,7 @@
                                 <h5 class="text-xl font-semibold tracking-tight  dark:text-black">{{ $d['product_name'] }}
                                 </h5>
                             </a>
-                            <p class="font-semibold tracking-tight text-black dark:text-blue-600">Remaining only
+                            <p class="font-semibold tracking-tight text-black dark:text-red-600">Remaining only
                                 {{ $d['product_quantity'] }} items</p>
                             
                             <div class="flex items-center justify-between">
