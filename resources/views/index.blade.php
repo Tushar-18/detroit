@@ -8,7 +8,6 @@
     <title>Document</title>
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="">
 </head>
 
 <body class="bg-white">
