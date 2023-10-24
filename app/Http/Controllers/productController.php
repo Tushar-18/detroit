@@ -92,4 +92,5 @@ class productController extends Controller
         $member = Members::select()->get();
         return view('admin/orders', compact('data', 'member'));
     }
+    
 }
