@@ -68,4 +68,10 @@ class productController extends Controller
         $data = Products::select()->get();
         return view('orders', compact('data'));
     }
+
+    public function items($product_id){
+        $data = Products::where('product_id',$product_id)->first();
+        return view('items',compact('data'));
+    }
+    
 }

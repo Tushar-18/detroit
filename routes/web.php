@@ -35,7 +35,7 @@ Route::view('/footer','footer');
 Route::view('/reset_pwd','reset_pwd');
 Route::view('/product-details','product-details');
 Route::view("admin.product-form","admin/product-form");
-Route::view("items","items");
+Route::get("items/{id}",[productController::class, "items"]);
 Route::get("add-cart/{product_id}",[cartController::class,'add_cart']);
 Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);

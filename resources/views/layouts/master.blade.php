@@ -155,9 +155,7 @@
                     <li class="mt-3">
                         <a class="text-black cursor-pointer hover:text-gray-400">Send a Message</a>
                     </li>
-                    <li class="mt-3">
-                        <a class="text-black cursor-pointer hover:text-gray-400">Request a Quote</a>
-                    </li>
+                    
                     <li class="mt-3">
                         <a class="text-black cursor-pointer hover:text-gray-400">+91 9638051095</a>
                     </li>

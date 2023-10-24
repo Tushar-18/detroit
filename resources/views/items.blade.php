@@ -11,17 +11,17 @@
 @section('index')
      <body class="bg-white">
       <div class="p-20">
-          <div class="bg-gray-300   w-auto h-auto p-20 flex rounded-lg">
+          <div class="bg-gray-300   w-auto h-auto p-20 flex rounded-lg">      
                 <div class="first-part">
-                      <img src="images/keyboard.jpg" class=" w-96 h-96 hover:transition delay-75 duration-300 ease-in-out hover:-translate-y-1" alt="errer">
+                      <img src="{{URL::to("/")}}/product_pic/{{$data['product_images']}}" class=" w-96 h-96 " alt="errer">
                 </div>
                 <div class="second-part pl-14  w-96 text-black">
                       <div class="flex flex-col">
-                            <label class="text-5xl">Keyboard</label>
-                            <label class="pt-5">Price ₹2900</label>
-                            <label class="pt-5">CHONCHOW LED Keyboard and Mouse, 104 Keys Rainbow Backlit Keyboard and 7 Color RGB Mouse, White Gaming Keyboard and Mouse Combo for PC Laptop Xbox PS4 Gamers and Work</label>
-                            <label class="text-lg mt-4 ml-4 ">🦖 Great Boss Battles</label>
-                            <label class="text-lg m-4">😍 Extremely Fun</label>
+                            <label class="text-5xl">{{$data['product_name']}}</label>
+                            <label class="pt-5">Price ₹{{$data['product_price']}}</label>
+                            <label class="pt-5">{{$data['product_description']}}</label>
+                            <label class="text-lg mt-4 text-green-600">Quantity {{$data['product_quantity']}}</label>
+                            <label class="text-lg ">Brand {{$data['product_brand']}}</label>
                       </div>
                 </div>
                 <div class="w-96 bg-zinc-400 rounded-3xl ml-16 h-auto p-6">
