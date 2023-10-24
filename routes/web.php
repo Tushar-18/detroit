@@ -58,8 +58,7 @@ Route::get("/status/{id}",[productController::class,'status_product']);
 Route::get("/user_status/{id}",[memberscontrollers::class,'status_users']);
 Route::view("admin/edit_userprofile", "admin/edit_userprofile");
 Route::view("admin/add_user", "admin/add_user");
-
-// Route::view('admin/edit_member', 'admin_edit_member');
+Route::view("admin/edit_product","admin/edit_product");
 Route::get("/edit_member/{id}", [admincontroler::class, 'edit_users']);
 Route::post("/admin_update_users", [admincontroler::class, 'admin_update_users']);
 Route::get("/admin_delete_product/{id}", [admincontroler::class, 'delete_product']);
