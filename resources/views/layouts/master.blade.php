@@ -1,53 +1,57 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <link rel="stylesheet" href="{{URL::to('/')}}/css/nav.css">
- {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <link rel="stylesheet" href="{{ URL::to('/') }}/css/nav.css">
 </head>
 <div class="container-main bg-zinc-200">
     <header class="header active">
-        <div class="logo"><a href="/"><img src="{{URL::to('/')}}/Images/black-logo.png" alt="error"></a></div>
+        <div class="logo"><a href="/"><img src="{{ URL::to('/') }}/Images/black-logo.png" alt="error"></a></div>
         <nav class="nav">
             <ul class="c1">
                 <li><a href="/">Home</a></li>
-                <li style="display: flex;">PC Component <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-7">
+                <li style="display: flex;">PC Component <span><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg></span>
-
-
-
                     <ul>
-                        <li><a href="{{URL::to('/')}}/catagorie/motherboard">Motherboard</a></li>
-                        <li><a href="{{URL::to('/')}}/catagorie/Graphics card">Graphics Card</a> </li>
-                        <li><a href="{{URL::to('/')}}/catagorie/processor">Processor</a></li>
-                        <li><a href="{{URL::to('/')}}/catagorie/ram">Ram</a></li>
-                        <li><a href="{{URL::to('/')}}/catagorie/rom">Rom</a></li>
-                        <li><a href="{{URL::to('/')}}/catagorie/psu">PSU</a></li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/motherboard">Motherboard</a></li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/Graphics card">Graphics Card</a> </li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/processor">Processor</a></li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/ram">Ram</a></li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/rom">Rom</a></li>
+                        <li><a href="{{ URL::to('/') }}/catagorie/psu">PSU</a></li>
                         <li><a>Cooling</a></li>
                     </ul>
                 </li>
-                {{-- <li><a href="">Engine</a></li> --}}
+                <li><a href="{{URL::to("/")}}/orders">Orders</a></li>
             </ul>
         </nav>
         <div class="profile">
-            @if(session()->has('email'))
-                <div class="cart px-3 hover:animate-bounce "><a href="cart" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
-            </a>
-        </div>
-        <div class="pro-in ">
-            <a href="edit_profile"><img class="border border-slate-600" src="{{URL::to('/')}}/profile_pic/{{session('pic')}}" alt="error" id="signin"></a>
-        </div>
-        <a href="edit_profile">
-        <label for="signin" style="margin-right: 10px">{{session('name')}}</label></a>
-        
-<div class="border-l-2 h-10 border-slate-600"></div>
-        <div class="log bg-zinc-300 px-5 py-2 rounded-3xl btn-hover ml-5 hover:bg-zinc-400"><a href="logout" >Logout</a></div>
+            @if (session()->has('email'))
+                <div class="cart px-3 hover:animate-bounce "><a href="cart"><svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="pro-in ">
+                    <a href="edit_profile"><img class="border border-slate-600"
+                            src="{{ URL::to('/') }}/profile_pic/{{ session('pic') }}" alt="error"
+                            id="signin"></a>
+                </div>
+                <a href="edit_profile">
+                    <label for="signin" style="margin-right: 10px">{{ session('name') }}</label></a>
+
+                <div class="border-l-2 h-10 border-slate-600"></div>
+                <div class="log bg-zinc-300 px-5 py-2 rounded-3xl btn-hover ml-5 hover:bg-zinc-400"><a
+                        href="logout">Logout</a></div>
             @else
-                <label for="Login" style="margin-right: 10px" class="bg-zinc-300 px-5 py-2 rounded-3xl btn-hover hover:bg-zinc-400"><a href="{{URL::to('/')}}/login">Login</a></label>
-        @endif
-            
+                <label for="Login" style="margin-right: 10px"
+                    class="bg-zinc-300 px-5 py-2 rounded-3xl btn-hover hover:bg-zinc-400"><a
+                        href="{{ URL::to('/') }}/login">Login</a></label>
+            @endif
+
             <div class="menutoggle">
                 <div></div>
                 <div></div>
@@ -70,8 +74,9 @@
     <div
         class="container flex align-middle flex-wrap px-8 py-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div class="flex-shrink-0 w-64 mx-auto mt-20 text-center md:mx-0 md:text-left">
-            <a href="/" class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
-               <img src="{{URL::to('/')}}/images/black-logo.png" alt="error">
+            <a href="/"
+                class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+                <img src="{{ URL::to('/') }}/images/black-logo.png" alt="error">
             </a>
             <p class="mt-2 text-sm text-black">Pc components, Keyboard and Mouse</p>
             <div class="mt-4">
@@ -98,8 +103,8 @@
                         </svg>
                     </a>
                     <a class="ml-3 text-black cursor-pointer hover:text-gray-300">
-                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
                             <path stroke="none"
                                 d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
                             </path>
@@ -115,25 +120,32 @@
                 </h2>
                 <nav class="mb-10 list-none flex flex-col">
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/motherboard" class="text-black cursor-pointer hover:text-gray-400">Motherborard</a>
+                        <a href="{{ URL::to('/') }}/catagorie/motherboard"
+                            class="text-black cursor-pointer hover:text-gray-400">Motherborard</a>
                     </li>
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/Graphics card"class="text-black cursor-pointer hover:text-gray-400">Graphics Card</a>
+                        <a
+                            href="{{ URL::to('/') }}/catagorie/Graphics card"class="text-black cursor-pointer hover:text-gray-400">Graphics
+                            Card</a>
                     </li>
                     <li class="mt-3">
                         <a href=""class="text-black cursor-pointer hover:text-gray-400">Processor</a>
                     </li>
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/processor"class="text-black cursor-pointer hover:text-gray-400">RAM</a>
+                        <a
+                            href="{{ URL::to('/') }}/catagorie/processor"class="text-black cursor-pointer hover:text-gray-400">RAM</a>
                     </li>
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/ram"class="text-black cursor-pointer hover:text-gray-400">ROM</a>
+                        <a
+                            href="{{ URL::to('/') }}/catagorie/ram"class="text-black cursor-pointer hover:text-gray-400">ROM</a>
                     </li>
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/rom"class="text-black cursor-pointer hover:text-gray-400">PSU</a>
+                        <a
+                            href="{{ URL::to('/') }}/catagorie/rom"class="text-black cursor-pointer hover:text-gray-400">PSU</a>
                     </li>
                     <li class="mt-3">
-                        <a href="{{URL::to('/')}}/catagorie/psu"class="text-black cursor-pointer hover:text-gray-400">Cooling</a>
+                        <a
+                            href="{{ URL::to('/') }}/catagorie/psu"class="text-black cursor-pointer hover:text-gray-400">Cooling</a>
                     </li>
                 </nav>
             </div>

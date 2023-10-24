@@ -41,12 +41,10 @@ Route::view("catagories", "catagories");
 Route::get("catagorie/{cat_id}",[productController::class, 'fetch_cat']);
 Route::view('edit_profile', 'edit_profile');
 Route::get('account_activation/{email}', [memberscontrollers::class, 'account_activation']);
-
 Route::get('/decrease/{id}/{qua}', [cartController::class, 'decrease']);
 Route::get('/increase/{id}/{qua}', [cartController::class, 'increase']);
 Route::get('/drop/{id}/', [cartController::class, 'drop_cart_item']);
-
-
+Route::get("orders",[productController::class, 'orders']);
 // Admin
 // Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);

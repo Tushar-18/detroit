@@ -64,4 +64,8 @@ class productController extends Controller
         $data = Products::where('product_catagory',$cat_id)->get();
         return view('catagories', compact('data'));
     }
+    public function orders(){
+        $data = Products::select()->get();
+        return view('orders', compact('data'));
+    }
 }
