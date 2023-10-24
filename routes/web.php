@@ -60,8 +60,9 @@ Route::view("admin/edit_userprofile", "admin/edit_userprofile");
 Route::view("admin/add_user", "admin/add_user");
 
 // Route::view('admin/edit_member', 'admin_edit_member');
-Route::get("/edit_member/{id}",[admincontroler::class, 'edit_users']);
-Route::post("/admin_update_users",[admincontroler::class, 'admin_update_users']);
-Route::get("/admin_delete_product/{id}",[admincontroler::class, 'delete_product']);
+Route::get("/edit_member/{id}", [admincontroler::class, 'edit_users']);
+Route::post("/admin_update_users", [admincontroler::class, 'admin_update_users']);
+Route::get("/admin_delete_product/{id}", [admincontroler::class, 'delete_product']);
+Route::view("/edit_member","admin/admin_edit_member");
 Route::get("/delete_member",[admincontroler::class,'delete_member']);
 Route::get("/delete_product/{id}",[admincontroler::class,'delete_product']);
