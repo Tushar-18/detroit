@@ -49,7 +49,8 @@ Route::get('/increase/{id}/{qua}', [cartController::class, 'increase']);
 Route::get('/drop/{id}/', [cartController::class, 'drop_cart_item']);
 Route::get("orders",[productController::class, 'myorders']);
 Route::get("buy/{id}",[productController::class, 'order']);
-
+Route::get("orders",[productController::class, 'orders']);
+Route::view("change_password","change_password");
 // Admin
 // Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);
