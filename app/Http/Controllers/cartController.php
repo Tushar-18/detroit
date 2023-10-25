@@ -99,10 +99,15 @@ class cartController extends Controller
 
      public function cart_order()
      {
-          $d = Cart::where('user_id', session('user_id'))->get();
-          
-          $order =new Orders();
-          foreach($d as $data){
+          $data = Cart::where('user_id', session('user_id'))->first();
+          if(empty($data)){
+               // Cart::where('user_id', session('user_id'))->delete();
+               DB::table('carts')
+                    ->where('user_id', session('user_id'))
+                    ->delete();
+               return redirect()->back();
+          }else{
+               $order = new Orders();
                $order->user_id = $data['user_id'];
                $order->product_id = $data['product_id'];
                $order->product_pic = $data['product_images'];
@@ -111,9 +116,17 @@ class cartController extends Controller
                $order->user_name = session('name');
                $order->order_quantity = $data['product_quantity'];
                $order->order_price = $data['product_price'];
+               // Cart::where('user_id', session('user_id'))->where('product_id', $data['product_id'])->delete();
+               DB::table('carts')
+                    ->where('user_id', session('user_id'))
+                    ->where('product_id', $data['product_id'])
+                    ->delete();
                $order->save();
-               $order->user_id = $order->user_id++;
+               return $this->cart_order();
           }
+          DB::table('carts')
+               ->where('user_id', session('user_id'))
+               ->delete();
           return redirect()->back();
      }
 }

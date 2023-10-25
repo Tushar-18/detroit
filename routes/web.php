@@ -49,11 +49,11 @@ Route::get('/increase/{id}/{qua}', [cartController::class, 'increase']);
 Route::get('/drop/{id}/', [cartController::class, 'drop_cart_item']);
 Route::get("orders",[productController::class, 'myorders']);
 Route::get("buy/{id}",[productController::class, 'order']);
-Route::get("orders",[productController::class, 'orders']);
+// Route::get("orders",[productController::class, 'orders']);
 Route::view("change_password","change_password");
 Route::post("change_pwd",[memberscontrollers::class,'change_pwd']);
-Route::post('edit-profile',[memberscontroller::class,'edit_profile']);
-Route::get('edit_profile/{id}',[memberscontroller::class,'fetch_users']);
+Route::post('update_users',[memberscontrollers::class, 'update_users']);
+Route::get('edit_users/{id}',[memberscontrollers::class, 'edit_users']);
 // Admin
 // Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);

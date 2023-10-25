@@ -10,6 +10,7 @@
 </head>
 <body class="bg-zinc-900">
   <!-- component -->
+    @section('index')
 <div class="flex flex-col md:flex-row w-screen h-full px-14 py-7">
 
     <!-- My Cart -->

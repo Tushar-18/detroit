@@ -39,11 +39,11 @@
                     </a>
                 </div>
                 <div class="pro-in ">
-                    <a href="edit_profile"><img class="border border-slate-600"
+                    <a href="{{ URL::to('/') }}/edit_users/{{session('user_id')}}"><img class="border border-slate-600"
                             src="{{ URL::to('/') }}/profile_pic/{{ session('pic') }}" alt="error"
                             id="signin"></a>
                 </div>
-                <a href="edit_profile">
+                <a href="{{ URL::to('/') }}/edit_users/{{session('user_id')}}">
                     <label for="signin" style="margin-right: 10px">{{ session('name') }}</label></a>
 
                 <div class="border-l-2 h-10 border-slate-600"></div>
