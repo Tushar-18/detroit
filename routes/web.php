@@ -52,6 +52,8 @@ Route::get("buy/{id}",[productController::class, 'order']);
 Route::get("orders",[productController::class, 'orders']);
 Route::view("change_password","change_password");
 Route::post("change_pwd",[memberscontrollers::class,'change_pwd']);
+Route::post('edit-profile',[memberscontroller::class,'edit_profile']);
+Route::get('edit_profile/{id}',[memberscontroller::class,'fetch_users']);
 // Admin
 // Route::view('/admin/dashboard','/admin/dashboard');
 Route::get('/admin/dashboard',[memberscontrollers::class,'fech_user']);

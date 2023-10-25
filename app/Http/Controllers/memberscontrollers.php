@@ -157,4 +157,45 @@ class memberscontrollers extends Controller
             echo 'password not match';
         }
     }
+    public function edit_profile(Request $req){
+        $req->validate([
+            'name' => 'required|max:20|min:2',
+            'dob' => 'required',    
+            
+        ],[
+            'name.required' => 'Name is required',
+            'name.min' => 'Full name must contain minimum 3 characters',
+            'name.max' => 'Full name must contain maximum of 30 characters',
+            'dob.required' => 'Date of Birth is required',
+            'profile.required' => 'Profile pohto not selected',
+            'profile.max' => 'file size is lessthan 30MB'
+        ]);
+
+        $result = Members::where('user_email', $req->email)->first();
+        if ($req->hasFile('profile')) {
+            $file_name = "Images/profile_pictures/" . $result['profile'];
+            if (File::exists($file_name)) {
+                File::delete($file_name);
+            }
+
+            $pic_name = uniqid() . $req->file('profile')->getClientOriginalName();
+            $req->profile->move('images/profile_pictures/', $pic_name);
+            $result->where('email', $req->email)->update(array('fullname' => $req->name,  'birth_date' => $req->dob, 'pic' => $pic_name));
+            session()->flash('succ', 'Data Updated successfully');
+        } else {
+            
+            $result->where('user_email', $req->email)->update(array('fullname' => $req->name, 'birth_date' => $req->dob));
+            session()->flash('succ', 'Data Updated successfully');
+        }
+        $result = Members::where('useer_email', $req->email)->first();
+        $req->session()->put('email', $result['email']);
+        $req->session()->put('pwd', $result['password']);
+        $req->session()->put('name', $result['fullname']);
+        $req->session()->put('pic', $result['pic']);
+        $req->session()->put('id',$result['id']);
+        
+        return redirect()->back();
+
+        return view('edit_profile');
+    }
 }
