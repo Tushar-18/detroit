@@ -23,8 +23,10 @@
                         <li><a>Cooling</a></li>
                     </ul>
                 </li>
+                 @if (session()->has('email'))
                 <li><a href="{{URL::to("/")}}/orders">Orders</a></li>
                 <li><a href="{{URL::to("/")}}/favourite">favourite</a></li>
+                @endif
             </ul>
         </nav>
         <div class="profile">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Members;
 use App\Models\Products;
 use App\Models\Cart;
+use App\Models\Orders;
 use Illuminate\Support\Facades\DB;
 
 use function PHPUnit\Framework\isEmpty;
@@ -94,5 +95,25 @@ class cartController extends Controller
                ->where('product_id', $id)
                ->delete();
           return $this->fetch_cart();
+     }
+
+     public function cart_order()
+     {
+          $d = Cart::where('user_id', session('user_id'))->get();
+          
+          $order =new Orders();
+          foreach($d as $data){
+               $order->user_id = $data['user_id'];
+               $order->product_id = $data['product_id'];
+               $order->product_pic = $data['product_images'];
+               $order->product_name = $data['product_name'];
+               $order->user_email = session('email');
+               $order->user_name = session('name');
+               $order->order_quantity = $data['product_quantity'];
+               $order->order_price = $data['product_price'];
+               $order->save();
+               $order->user_id = $order->user_id++;
+          }
+          return redirect()->back();
      }
 }

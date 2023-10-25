@@ -26,7 +26,7 @@
                 </div>
                 <div class="w-96 bg-zinc-400 rounded-3xl ml-16 h-auto p-6">
     
-                      <div class="bg-blue-700 items-center flex w-80 h-10 mt-20 mb-20  justify-center rounded-lg text-white hover:bg-blue-800 hover:transition delay-75 duration-300 ease-in-out hover:-translate-y-1"><a href="">BUY NOW</a></div>
+                      <div class="bg-blue-700 items-center flex w-80 h-10 mt-20 mb-20  justify-center rounded-lg text-white hover:bg-blue-800 hover:transition delay-75 duration-300 ease-in-out hover:-translate-y-1"><a href="{{URL::to('/')}}/buy/{{$data['product_id']}}">BUY NOW</a></div>
     
                       <div class="bg-none border items-center flex w-80 h-10 mt-20 mb-20 justify-center rounded-lg text-white hover:bg-zinc-200/10 hover:transition delay-75 duration-300 ease-in-out hover:-translate-y-1"><a href="">Add to Cart</a></div>
                       
