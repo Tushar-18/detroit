@@ -16,6 +16,7 @@
     <div class="w-full flex flex-col h-fit gap-4 p-4 ">
         <p class="text-white text-xl font-extrabold">My cart</p>
 
+        <?php $items = 0; $price = 0?>
         <!-- Product -->
         @foreach ($data as $d)
             <div class="flex flex-col p-4 text-lg font-semibold shadow-md  rounded-3x border-black rounded-sm bg-zinc-700">
@@ -33,10 +34,10 @@
                 </div>
                 <!-- Price Information -->
                 <div class="self-center text-center ml-28">
-                    <p class="text-white font-normal text-sm line-through">$99.99
-                        <span class="text-emerald-500 ml-2">(-50% OFF)</span>
+                    <p class="text-white font-normal text-sm">Product Price ₹{{$d['product_price']}}
+                        {{-- <span class="text-emerald-500 ml-2">(-50% OFF)</span> --}}
                     </p>
-                    <p class="text-white font-normal text-xl ">₹{{$d['product_price']}}</p>
+                    <p class="text-white font-normal text-xl ">Total ₹{{$d['product_price']*$d['product_quantity']}}</p>
                 </div>
                 <!-- Remove Product Icon -->
                 <div class="self-center">
@@ -68,6 +69,10 @@
 </div>
             @endif
         </div>
+        <div class="hidden">
+            {{  $items = $items + $d['product_quantity'] }}
+        {{  $price =$price + $d['product_price']*$d['product_quantity']}}
+        </div>
         @endforeach
     </div>
 
@@ -76,15 +81,15 @@
         <p class="text-white text-xl font-extrabold">Purchase Resume</p>
         <div class="flex flex-col p-4 gap-4 text-lg font-semibold shadow-md border rounded-sm">
             <div class="flex flex-row justify-between">
-                <p class="text-white">Subtotal (2 Items)</p>
-                <p class="text-white text-end font-bold">$99.98</p>
+                <p class="text-white">Subtotal ({{$items}} Items)</p>
+                <p class="text-white text-end font-bold">₹{{$price}}</p>
             </div>
             <hr class="bg-gray-200 h-0.5">
             <div class="flex flex-row justify-between">
                 <p class="text-white">Freight</p>
                 <div>
                 <p class=" text-white text-end font-bold">$3.90</p>
-                <p class="text-white text-sm font-normal">Arrives on Jul 16</p>
+                {{-- <p class="text-white text-sm font-normal">Arrives on Jul 16</p> --}}
                 </div>
             </div>
             {{-- <hr class="bg-gray-200 h-0.5">
@@ -100,9 +105,9 @@
                 </div>
             </div>
             <div class="flex gap-2">
-                <button class="transition-colors text-sm bg-blue-600 hover:bg-blue-700 p-2 rounded-sm w-64 text-white text-hover shadow-md btn-hover">
+                <a href="{{URL::to('/')}}/cart_order" class="transition-colors text-sm bg-blue-600 hover:bg-blue-700 p-2 rounded-sm w-64 text-white text-hover shadow-md btn-hover">
                         FINISH  
-                </button>
+                </a>
                 <a href="/">
                 <button class="transition-colors text-sm bg-white border border-gray-600 p-2 rounded-sm w-60 text-black text-hover shadow-md btn-hover">
                         ADD MORE PRODUCTS

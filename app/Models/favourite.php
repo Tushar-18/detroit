@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Orders extends Model
+class favourite extends Model
 {
     use HasFactory;
-    public $table = "orders";
-    protected $primaryKey = 'id';
+    public $table = "favourite";
 }
