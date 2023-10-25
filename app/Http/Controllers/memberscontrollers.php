@@ -148,9 +148,9 @@ class memberscontrollers extends Controller
              'pwd.regex' => 'use !,#,$,%,^,&,*,-,?'
 
         ]);
-        $data = Members::where('email', session()->get('email'))->first();
-        if($data['password'] == $req->old_pwd){
-            $data = Members::where('email', session('email'))->update(array('password'=> $req->pwd));
+        $data = Members::where('user_email', session()->get('email'))->first();
+        if($data['user_pwd'] == $req->old_pwd){
+            $data = Members::where('user_email', session('email'))->update(array('user_pwd'=> $req->pwd));
             return view('login');
         }
         else{
