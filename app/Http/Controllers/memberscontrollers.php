@@ -130,4 +130,31 @@ class memberscontrollers extends Controller
             return redirect('admin/dashboard');
         }
     }
+    public function change_pwd(Request $req){
+        $req->validate([   
+            'old_pwd' => 'required|min:4|max:20|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$/',
+            'pwd' => 'required|confirmed|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$/',
+            'pwd_confirmation' => 'required'
+        ],[
+            'old_pwd.required' => 'old password required',
+            'pwd.required' => 'New password required',
+            'old_pwd.min' => 'old password must have 4 character',
+            'pwd.min' => 'new password must have 4 character',
+            'old_pwd.max' => 'old password must have 20 charcter',
+            'pwd.max' => 'new password must have 20 charcter',
+            'pwd.confirmed' => 'Password and Confirm Password must match',
+            'pwd_confirmation.required' => 'please enter password',
+             'old_pwd.regex' => 'use !,#,$,%,^,&,*,-,?',
+             'pwd.regex' => 'use !,#,$,%,^,&,*,-,?'
+
+        ]);
+        $data = Members::where('email', session()->get('email'))->first();
+        if($data['password'] == $req->old_pwd){
+            $data = Members::where('email', session('email'))->update(array('password'=> $req->pwd));
+            return view('login');
+        }
+        else{
+            echo 'password not match';
+        }
+    }
 }
